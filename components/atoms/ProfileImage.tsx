@@ -4,14 +4,18 @@ interface ProfileImageProps {
   src: string;
   alt: string;
   shape?: "circle" | "square" | "rounded";
-  className?: string;
+  width?: number;
+  height?: number;
+  containerClassName?: string;
 }
 
 export const ProfileImage = ({
   src,
   alt,
   shape = "square",
-  className = "",
+  width = 576,
+  height = 576,
+  containerClassName = "",
 }: ProfileImageProps) => {
   const shapeClasses = {
     circle: "rounded-full",
@@ -21,13 +25,14 @@ export const ProfileImage = ({
 
   return (
     <div
-      className={`relative w-full h-full overflow-hidden ${shapeClasses[shape]} ${className}`}
+      className={`relative overflow-hidden ${shapeClasses[shape]} ${containerClassName}`}
+      style={{ width: `${width}px`, height: `${height}px` }}
     >
       <Image
         src={src}
         alt={alt}
-        width={576}
-        height={576}
+        width={width}
+        height={height}
         className="object-cover w-full h-full"
         priority
       />

@@ -2,15 +2,10 @@ import { ReactNode } from "react";
 
 interface BodyTextProps {
   children: ReactNode;
-  className?: string;
 }
 
-export const BodyText = ({ children, className = "" }: BodyTextProps) => {
+export const BodyText = ({ children }: BodyTextProps) => {
   return (
-    <p
-      className={`text-[#2F4F4F] font-normal leading-relaxed font-main ${className}`}
-    >
-      {children}
-    </p>
+    <p className={` font-normal leading-relaxed font-main `}>{children}</p>
   );
 };

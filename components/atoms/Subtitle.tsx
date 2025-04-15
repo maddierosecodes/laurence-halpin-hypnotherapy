@@ -2,15 +2,10 @@ import { ReactNode } from "react";
 
 interface SubtitleProps {
   children: ReactNode;
-  className?: string;
 }
 
-export const Subtitle = ({ children, className = "" }: SubtitleProps) => {
+export const Subtitle = ({ children }: SubtitleProps) => {
   return (
-    <p
-      className={`text-[#2F4F4F] font-normal leading-normal font-secondary ${className}`}
-    >
-      {children}
-    </p>
+    <p className={` font-normal leading-normal font-secondary`}>{children}</p>
   );
 };

@@ -1,16 +1,11 @@
 interface CopyrightProps {
   year: number;
   companyName: string;
-  className?: string;
 }
 
-export const Copyright = ({
-  year,
-  companyName,
-  className = "",
-}: CopyrightProps) => {
+export const Copyright = ({ year, companyName }: CopyrightProps) => {
   return (
-    <div className={`text-sm text-gray-600 font-secondary ${className}`}>
+    <div className={`text-sm  font-secondary`}>
       © {year} {companyName}. All rights reserved.
     </div>
   );

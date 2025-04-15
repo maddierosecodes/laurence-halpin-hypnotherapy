@@ -8,21 +8,19 @@ export const HomeHero = () => {
   const textContent = (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <div className="text-8xl">
+        <div className="text-8xl text-mint">
           <Title>
             Laurence
             <br />
             Halpin
           </Title>
         </div>
-        <div className="text-3xl">
+        <div className="text-3xl text-sage">
           <Subtitle>Hypnotherapist</Subtitle>
         </div>
       </div>
-      <div className="text-2xl">
-        <BodyText className="max-w-lg">
-          Helping you achieve positive change
-        </BodyText>
+      <div className="text-2xl text-cream">
+        <BodyText>Helping you achieve positive change</BodyText>
       </div>
     </div>
   );
