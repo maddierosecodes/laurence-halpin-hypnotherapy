@@ -17,11 +17,8 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col min-h-screen">
         <Header />
-        <main className="flex-grow bg-forest">{children}</main>
-        <Footer
-          companyName="maddierosecodes"
-          privacyPolicyUrl="/privacy-policy"
-        />
+        <main className="flex-grow bg-forest pt-20">{children}</main>
+        <Footer />
       </body>
     </html>
   );

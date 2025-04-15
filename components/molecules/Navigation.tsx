@@ -20,7 +20,7 @@ export const Navigation = ({ links }: NavigationProps) => {
           className="rounded-sm px-2 text-mint-200 hover:text-ink-400 hover:bg-ink-50"
         >
           {link.dropdownItems ? (
-            <DropdownMenu label={link.label} items={link.dropdownItems} />
+            <DropdownMenu label={link.label} items={link.dropdownItems} href={link.href} />
           ) : (
             <NavLink href={link.href}>{link.label}</NavLink>
           )}

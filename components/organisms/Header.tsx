@@ -1,6 +1,7 @@
 import { Title } from "../atoms/Title";
 import { Subtitle } from "../atoms/Subtitle";
 import { Navigation } from "../molecules/Navigation";
+import Link from "next/link";
 
 const navigationLinks = [
   { href: "/", label: "Home" },
@@ -25,17 +26,17 @@ const navigationLinks = [
 
 export const Header = () => {
   return (
-    <nav className="bg-sage py-4">
+    <nav className="bg-sage py-4 fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <div className="flex flex-col">
-            <div className="text-2xl text-mint">
+          <Link href="/" className="flex flex-col">
+            <div className="text-3xl text-mint">
               <Title>Laurence Halpin</Title>
             </div>
             <div className="text-lg text-forest">
               <Subtitle>Hypnotherapist</Subtitle>
             </div>
-          </div>
+          </Link>
           <Navigation links={navigationLinks} />
         </div>
       </div>
