@@ -1,26 +1,76 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Cabin:wght@400;700&family=Lato:wght@400;700&display=swap");
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Fonts */
+  --font-primary: "EB Garamond", serif;
+  --font-secondary: "Cabin", sans-serif;
+  --font-main: "Lato", sans-serif;
+  /* Colours */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-cream: #e8f1f2;
+  --color-mint: #b3efb2;
+  --color-sage: #7a9e7e;
+  --color-forest: #31493c;
+  --color-ink: #001a23;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* Cream Gradient */
+  --color-cream-50: #f2f6f6;
+  --color-cream-100: #eef5f5;
+  --color-cream-200: #eaf4f4;
+  --color-cream-300: #e4f2f2;
+  --color-cream-400: #e0f1f1;
+  --color-cream-500: #e8f1f2;
+  --color-cream-600: #c1d5d6;
+  --color-cream-700: #9ab9ba;
+  --color-cream-800: #739d9f;
+  --color-cream-900: #4c8283;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Mint Gradient */
+  --color-mint-50: #f3fdf3;
+  --color-mint-100: #e1fbe0;
+  --color-mint-200: #c9f6c8;
+  --color-mint-300: #b3efb2;
+  --color-mint-400: #8ed88d;
+  --color-mint-500: #6ac06a;
+  --color-mint-600: #54a653;
+  --color-mint-700: #41843f;
+  --color-mint-800: #2d632c;
+  --color-mint-900: #1a421a;
+
+  /* Sage Gradient */
+  --color-sage-50: #edf3ed;
+  --color-sage-100: #dfeadd;
+  --color-sage-200: #c9d8c6;
+  --color-sage-300: #b2c6af;
+  --color-sage-400: #9bb399;
+  --color-sage-500: #7a9e7e;
+  --color-sage-600: #618164;
+  --color-sage-700: #4b624d;
+  --color-sage-800: #354536;
+  --color-sage-900: #1e2820;
+
+  /* Forest Gradient */
+  --color-forest-50: #e9efec;
+  --color-forest-100: #d0dad4;
+  --color-forest-200: #a6bdb2;
+  --color-forest-300: #7d9f90;
+  --color-forest-400: #54726b;
+  --color-forest-500: #31493c;
+  --color-forest-600: #253730;
+  --color-forest-700: #1a2624;
+  --color-forest-800: #0e1413;
+  --color-forest-900: #050808;
+
+  /* Ink Gradient */
+  --color-ink-50: #e5ebed;
+  --color-ink-100: #cdd9dd;
+  --color-ink-200: #9cb5c0;
+  --color-ink-300: #6a90a2;
+  --color-ink-400: #386c85;
+  --color-ink-500: #001a23;
+  --color-ink-600: #00141b;
+  --color-ink-700: #000f14;
+  --color-ink-800: #000a0d;
+  --color-ink-900: #000407;
 }
