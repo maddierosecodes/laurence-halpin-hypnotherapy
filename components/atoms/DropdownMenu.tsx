@@ -53,25 +53,29 @@ export const DropdownMenu = ({ label, items, href }: DropdownMenuProps) => {
   }, []);
 
   return (
-    <div
+    <nav
       ref={dropdownRef}
       className="relative"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      aria-label={`${label} navigation`}
     >
       <div className="flex items-center">
         <Link href={href} className="text-lg font-main hover:text-ink-400">
           {label}
         </Link>
-        <span className="ml-1 text-xs">▼</span>
+        <span className="ml-1 text-xs" aria-hidden="true">
+          ▼
+        </span>
       </div>
       {isOpen && (
-        <div
-          className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-sage ring-1 ring-black ring-opacity-5"
+        <section
+          className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-forest-800 ring-1 ring-black ring-opacity-5"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          aria-label={`${label} submenu`}
         >
-          <div className="py-1" role="menu">
+          <nav className="py-1" role="menu" aria-label={`${label} options`}>
             {items.map((item) => (
               <Link
                 key={item.href}
@@ -83,9 +87,9 @@ export const DropdownMenu = ({ label, items, href }: DropdownMenuProps) => {
                 {item.label}
               </Link>
             ))}
-          </div>
-        </div>
+          </nav>
+        </section>
       )}
-    </div>
+    </nav>
   );
 };

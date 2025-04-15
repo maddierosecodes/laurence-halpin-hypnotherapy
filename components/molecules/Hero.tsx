@@ -14,19 +14,22 @@ export const Hero = ({
   className = "",
 }: HeroProps) => {
   const contentArray = [
-    <div key="text" className="flex-1">
+    <section key="text" className="flex-1" aria-label="Hero text content">
       {textComponent}
-    </div>,
-    <div key="image" className="flex-1">
+    </section>,
+    <figure key="image" className="flex-1" aria-label="Hero image">
       {imageComponent}
-    </div>,
+    </figure>,
   ];
 
   return (
-    <div className={`flex items-start py-16 ${className}`}>
+    <section
+      className={`flex items-start py-16 ${className}`}
+      aria-label="Hero section"
+    >
       <div className="max-w-7xl mx-auto flex items-start gap-24 px-4 align-middle">
         {imagePosition === "right" ? contentArray : contentArray.reverse()}
       </div>
-    </div>
+    </section>
   );
 };

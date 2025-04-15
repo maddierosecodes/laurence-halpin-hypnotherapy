@@ -26,20 +26,27 @@ const navigationLinks = [
 
 export const Header = () => {
   return (
-    <nav className="bg-sage py-4 fixed top-0 left-0 right-0 z-50">
+    <header
+      className="bg-forest-800 py-4 fixed top-0 left-0 right-0 z-50"
+      role="banner"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link href="/" className="flex flex-col">
-            <div className="text-3xl text-mint">
+          <Link
+            href="/"
+            className="flex flex-col"
+            aria-label="Laurence Halpin Hypnotherapist - Home"
+          >
+            <h1 className="text-3xl text-mint">
               <Title>Laurence Halpin</Title>
-            </div>
-            <div className="text-lg text-forest">
+            </h1>
+            <p className="text-lg text-cream-100">
               <Subtitle>Hypnotherapist</Subtitle>
-            </div>
+            </p>
           </Link>
           <Navigation links={navigationLinks} />
         </div>
       </div>
-    </nav>
+    </header>
   );
 };

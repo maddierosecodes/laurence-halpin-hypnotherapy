@@ -24,9 +24,11 @@ export const ProfileImage = ({
   };
 
   return (
-    <div
+    <figure
       className={`relative overflow-hidden ${shapeClasses[shape]} ${containerClassName}`}
       style={{ width: `${width}px`, height: `${height}px` }}
+      role="img"
+      aria-label={alt}
     >
       <Image
         src={src}
@@ -36,6 +38,6 @@ export const ProfileImage = ({
         className="object-cover w-full h-full"
         priority
       />
-    </div>
+    </figure>
   );
 };

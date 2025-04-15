@@ -6,33 +6,33 @@ import { Hero } from "../molecules/Hero";
 
 export const HomeHero = () => {
   const textContent = (
-    <div className="flex flex-col gap-6">
-      <div className="flex flex-col gap-2">
-        <div className="text-8xl text-mint">
+    <section className="flex flex-col gap-6" aria-label="Introduction">
+      <header className="flex flex-col gap-2">
+        <h1 className="text-8xl text-mint">
           <Title>
             Laurence
             <br />
             Halpin
           </Title>
-        </div>
-        <div className="text-3xl text-sage">
+        </h1>
+        <p className="text-3xl text-mint-100">
           <Subtitle>Hypnotherapist</Subtitle>
-        </div>
-      </div>
-      <div className="text-2xl text-cream">
+        </p>
+      </header>
+      <p className="text-2xl text-cream-200">
         <BodyText>Helping you achieve positive change</BodyText>
-      </div>
-    </div>
+      </p>
+    </section>
   );
 
   const imageContent = (
-    <div className="w-[32rem] h-[32rem]">
+    <figure className="w-[32rem] h-[32rem]" aria-label="Profile image">
       <ProfileImage
         src="/images/laurence_halpin.png"
         alt="Laurence Halpin"
         shape="circle"
       />
-    </div>
+    </figure>
   );
 
   return (
