@@ -26,7 +26,7 @@ export const ProfileImage = ({
   return (
     <figure
       className={`relative overflow-hidden ${shapeClasses[shape]} ${containerClassName}`}
-      style={{ width: `${width}px`, height: `${height}px` }}
+      style={{ width: "100%", height: "100%" }}
       role="img"
       aria-label={alt}
     >

@@ -6,6 +6,6 @@ interface SubtitleProps {
 
 export const Subtitle = ({ children }: SubtitleProps) => {
   return (
-    <p className={` font-normal leading-normal font-secondary`}>{children}</p>
+    <p className={`font-normal leading-normal font-secondary`}>{children}</p>
   );
 };

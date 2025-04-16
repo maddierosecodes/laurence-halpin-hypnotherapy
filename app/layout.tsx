@@ -65,7 +65,7 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <Header />
         <main
-          className="flex-grow bg-forest pt-20"
+          className="flex-grow bg-mint-100 pt-20"
           id="main-content"
           tabIndex={-1}
         >

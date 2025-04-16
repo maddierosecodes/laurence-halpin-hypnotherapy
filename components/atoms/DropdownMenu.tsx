@@ -61,7 +61,7 @@ export const DropdownMenu = ({ label, items, href }: DropdownMenuProps) => {
       aria-label={`${label} navigation`}
     >
       <div className="flex items-center">
-        <Link href={href} className="text-lg font-main hover:text-ink-400">
+        <Link href={href} className="text-lg font-main">
           {label}
         </Link>
         <span className="ml-1 text-xs" aria-hidden="true">
@@ -70,7 +70,7 @@ export const DropdownMenu = ({ label, items, href }: DropdownMenuProps) => {
       </div>
       {isOpen && (
         <section
-          className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-forest-800 ring-1 ring-black ring-opacity-5"
+          className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-ink-50 ring-1 ring-black ring-opacity-5"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           aria-label={`${label} submenu`}
@@ -80,7 +80,7 @@ export const DropdownMenu = ({ label, items, href }: DropdownMenuProps) => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-2 text-sm text-mint-200 hover:text-ink-400 hover:bg-cream"
+                className="block px-4 py-2 text-sm text-ink-400 hover:text-mint-600 hover:bg-mint-100"
                 role="menuitem"
                 onClick={() => setIsOpen(false)}
               >
