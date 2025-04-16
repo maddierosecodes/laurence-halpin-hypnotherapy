@@ -80,7 +80,7 @@ export const DropdownMenu = ({ label, items, href }: DropdownMenuProps) => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-2 text-sm text-ink-400 hover:text-mint-600 hover:bg-mint-100"
+                className="block px-4 py-2 text-sm text-ink-400 hover:text-mint-800 hover:bg-mint-100"
                 role="menuitem"
                 onClick={() => setIsOpen(false)}
               >

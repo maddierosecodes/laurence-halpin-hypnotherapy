@@ -29,10 +29,10 @@ export const BurgerMenu = ({ links }: BurgerMenuProps) => {
   }, []);
 
   return (
-    <div ref={menuRef} className="relative flex justify-center">
+    <div ref={menuRef} className="relative">
       <button
         onClick={toggleMenu}
-        className="flex flex-col justify-center items-center w-10 h-10 text-mint hover:text-ink-400 focus:outline-none"
+        className="flex flex-col justify-center items-center w-10 h-10 text-mint-800 hover:text-ink focus:outline-none"
         aria-label="Toggle menu"
         aria-expanded={isOpen}
       >
@@ -54,34 +54,63 @@ export const BurgerMenu = ({ links }: BurgerMenuProps) => {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 rounded-md shadow-lg bg-forest-800 ring-1 ring-black ring-opacity-5 z-[100]">
-          <nav className="py-2" role="menu" aria-label="Mobile navigation">
-            {links.map((link) => (
-              <div key={link.href} className="px-4 py-2">
-                <a
-                  href={link.href}
-                  className="block text-lg text-mint-200 hover:text-ink-400 hover:bg-cream py-1"
-                  onClick={() => setIsOpen(false)}
+        <div className="fixed inset-0 bg-forest-800 z-[100]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div className="flex justify-end pt-4">
+              <button
+                onClick={toggleMenu}
+                className="text-mint-200 hover:text-ink-400 focus:outline-none"
+                aria-label="Close menu"
+              >
+                <svg
+                  className="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  {link.label}
-                </a>
-                {link.dropdownItems && (
-                  <div className="pl-4 mt-1">
-                    {link.dropdownItems.map((item) => (
-                      <a
-                        key={item.href}
-                        href={item.href}
-                        className="block text-sm text-mint-200 hover:text-ink-400 hover:bg-cream py-1"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {item.label}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <nav
+              className="flex flex-col items-center justify-center h-[calc(100%-4rem)]"
+              role="menu"
+              aria-label="Mobile navigation"
+            >
+              {links.map((link) => (
+                <div key={link.href} className="w-full text-center py-4">
+                  <a
+                    href={link.href}
+                    className="block text-2xl text-mint-200 hover:text-ink-400 py-2"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                  {link.dropdownItems && (
+                    <div className="mt-2 w-full flex justify-center">
+                      <div className="pl-20 flex flex-col items-start">
+                        {link.dropdownItems.map((item) => (
+                          <a
+                            key={item.href}
+                            href={item.href}
+                            className="block text-xl text-mint-200 hover:text-ink-400 py-2"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {item.label}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+          </div>
         </div>
       )}
     </div>

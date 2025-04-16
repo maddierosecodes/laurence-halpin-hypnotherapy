@@ -29,11 +29,11 @@ export const Header = () => {
   return (
     <header className=" py-4 fixed top-0 left-0 right-0 z-50" role="banner">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-          <div className="flex justify-center lg:justify-start mb-4 lg:mb-0">
+        <div className="flex justify-between items-center">
+          <div className="flex justify-start">
             <Link
               href="/"
-              className="flex flex-col items-center lg:items-start"
+              className="flex flex-col items-start"
               aria-label="Laurence Halpin Hypnotherapist - Home"
             >
               <span className="text-4xl text-sage-800">
@@ -44,7 +44,7 @@ export const Header = () => {
               </span>
             </Link>
           </div>
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-end">
             <Navigation links={navigationLinks} />
             <div className="lg:hidden">
               <BurgerMenu links={navigationLinks} />
