@@ -1,21 +1,27 @@
 import { HomeHero } from "@/components/organisms/HomeHero";
+import { CTAsection } from "@/components/organisms/CTAsection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Hypnotherapy in Chorley | Home",
   description:
-    "Welcome to Laurence Halpin Hypnotherapy. Professional hypnotherapy services to help you achieve positive change in your life.",
+    "Professional hypnotherapy in Chorley by Laurence Halpin. Helping people overcome anxiety, manage stress, and build lasting confidence through evidence-based hypnosis.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Laurence Halpin Hypnotherapy | Home",
+    title: "Hypnotherapy in Chorley | Laurence Halpin",
     description:
-      "Welcome to Laurence Halpin Hypnotherapy. Professional hypnotherapy services to help you achieve positive change in your life.",
-    url: "https://laurencehalpinhypnotherapy.com",
+      "Discover personalised hypnotherapy services in Chorley with Laurence Halpin. Specialising in anxiety, smoking cessation, and stress management.",
+    url: "https://www.lhhypnotherapy.co.uk/",
   },
 };
 
 export default function Home() {
-  return <HomeHero />;
+  return (
+    <>
+      <HomeHero />;
+      <CTAsection />
+    </>
+  );
 }

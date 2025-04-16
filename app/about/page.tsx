@@ -19,17 +19,28 @@ export default function About() {
   return (
     <main className="min-h-screen" role="main">
       <section
+        id="about-laurence"
         className="min-h-screen flex items-center justify-center"
-        aria-labelledby="about-heading"
+        aria-labelledby="about-laurence-heading"
       >
-        <h1 id="about-heading" className="text-4xl font-bold">
-          About
+        <h1 id="about-laurence-heading" className="text-4xl font-bold">
+          About Laurence
         </h1>
       </section>
 
       <section
-        id="testimonials"
+        id="about-hypnotherapy"
         className="min-h-screen flex items-center justify-center bg-gray-50"
+        aria-labelledby="about-hypnotherapy-heading"
+      >
+        <h2 id="about-hypnotherapy-heading" className="text-4xl font-bold">
+          About Hypnotherapy
+        </h2>
+      </section>
+
+      <section
+        id="testimonials"
+        className="min-h-screen flex items-center justify-center"
         aria-labelledby="testimonials-heading"
       >
         <h2 id="testimonials-heading" className="text-4xl font-bold">
@@ -39,7 +50,7 @@ export default function About() {
 
       <section
         id="articles"
-        className="min-h-screen flex items-center justify-center"
+        className="min-h-screen flex items-center justify-center bg-gray-50"
         aria-labelledby="articles-heading"
       >
         <h2 id="articles-heading" className="text-4xl font-bold">

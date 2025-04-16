@@ -7,18 +7,22 @@ import Link from "next/link";
 const navigationLinks = [
   { href: "/", label: "Home" },
   {
-    href: "/about",
+    href: "/about#about-laurence",
     label: "About",
     dropdownItems: [
+      { href: "/about#about-laurence", label: "About Laurence" },
+      { href: "/about#about-hypnotherapy", label: "About Hypnotherapy" },
       { href: "/about#testimonials", label: "Testimonials" },
       { href: "/about#articles", label: "Articles" },
     ],
   },
   {
-    href: "/services",
+    href: "/services#hypnotherapy",
     label: "Services",
     dropdownItems: [
       { href: "/services#hypnotherapy", label: "Hypnotherapy" },
+      { href: "/services#stop-smoking", label: "Stop Smoking" },
+      { href: "/services#overcome-phobias", label: "Overcome Phobias" },
       { href: "/services#pricing", label: "Pricing" },
     ],
   },

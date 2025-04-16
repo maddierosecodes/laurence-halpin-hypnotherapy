@@ -19,27 +19,38 @@ export default function Services() {
   return (
     <main className="min-h-screen" role="main">
       <section
+        id="hypnotherapy"
         className="min-h-screen flex items-center justify-center"
-        aria-labelledby="services-heading"
+        aria-labelledby="hypnotherapy-heading"
       >
-        <h1 id="services-heading" className="text-4xl font-bold">
-          Services
+        <h1 id="hypnotherapy-heading" className="text-4xl font-bold">
+          Hypnotherapy
         </h1>
       </section>
 
       <section
-        id="hypnotherapy"
+        id="stop-smoking"
         className="min-h-screen flex items-center justify-center bg-gray-50"
-        aria-labelledby="hypnotherapy-heading"
+        aria-labelledby="stop-smoking-heading"
       >
-        <h2 id="hypnotherapy-heading" className="text-4xl font-bold">
-          Hypnotherapy
+        <h2 id="stop-smoking-heading" className="text-4xl font-bold">
+          Stop Smoking
+        </h2>
+      </section>
+
+      <section
+        id="overcome-phobias"
+        className="min-h-screen flex items-center justify-center"
+        aria-labelledby="overcome-phobias-heading"
+      >
+        <h2 id="overcome-phobias-heading" className="text-4xl font-bold">
+          Overcome Phobias
         </h2>
       </section>
 
       <section
         id="pricing"
-        className="min-h-screen flex items-center justify-center"
+        className="min-h-screen flex items-center justify-center bg-gray-50"
         aria-labelledby="pricing-heading"
       >
         <h2 id="pricing-heading" className="text-4xl font-bold">

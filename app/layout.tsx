@@ -5,18 +5,21 @@ import { Footer } from "@/components/organisms/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Laurence Halpin Hypnotherapy",
-    template: "%s | Laurence Halpin Hypnotherapy",
+    default: "Hypnotherapy in Chorley | Laurence Halpin",
+    template: "%s | Hypnotherapy in Chorley | Laurence Halpin",
   },
   description:
-    "Professional hypnotherapy services by Laurence Halpin, helping you achieve positive change through evidence-based hypnotherapy techniques.",
+    "Laurence Halpin is a qualified hypnotherapist based in Chorley, offering compassionate, effective hypnotherapy services for anxiety, stress, weight loss, and more.",
   keywords: [
-    "hypnotherapy",
+    "hypnotherapy Chorley",
     "Laurence Halpin",
-    "therapy",
-    "mental health",
+    "Chorley hypnotherapist",
+    "anxiety hypnotherapy",
+    "smoking cessation Chorley",
+    "stress management",
+    "hypnosis therapy Chorley",
     "wellbeing",
-    "positive change",
+    "mental health support",
   ],
   authors: [{ name: "Laurence Halpin" }],
   creator: "Laurence Halpin",
@@ -26,15 +29,15 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://laurencehalpinhypnotherapy.com"),
+  metadataBase: new URL("https://www.lhhypnotherapy.co.uk/"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Laurence Halpin Hypnotherapy",
+    title: "Hypnotherapy in Chorley | Laurence Halpin",
     description:
-      "Professional hypnotherapy services by Laurence Halpin, helping you achieve positive change through evidence-based hypnotherapy techniques.",
-    url: "https://laurencehalpinhypnotherapy.com",
+      "Looking for hypnotherapy in Chorley? Laurence Halpin offers personalised sessions to help with anxiety, weight loss, smoking cessation and more.",
+    url: "https://www.lhhypnotherapy.co.uk/",
     siteName: "Laurence Halpin Hypnotherapy",
     locale: "en_GB",
     type: "website",
@@ -51,7 +54,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-code", // Replace with actual verification code
+    google: "google-site-verification-code", // Replace with your real code
   },
 };
 

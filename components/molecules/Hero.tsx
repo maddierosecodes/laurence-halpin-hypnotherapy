@@ -24,7 +24,7 @@ export const Hero = ({
 
   return (
     <section
-      className={`flex items-start py-8 lg:py-16 ${className}`}
+      className={`flex items-start py-8 lg:py-0 ${className}`}
       aria-label="Hero section"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-24 xl:gap-50 px-4 align-middle">

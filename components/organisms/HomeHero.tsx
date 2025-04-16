@@ -36,12 +36,13 @@ export const HomeHero = () => {
           </Title>
         </span>
         <span className="text-2xl lg:text-3xl text-mint-700">
-          <Subtitle>Hypnotherapist</Subtitle>
+          <Subtitle>Solutions Focused Hypnotherapy</Subtitle>
         </span>
       </header>
       <span className="text-xl lg:text-2xl text-ink-400">
         <BodyText>
-          <em>Helping you achieve positive change</em>
+          Helping you overcome anxiety, manage stress, <br />
+          and build lasting confidence through evidence-based hypnotherapy
         </BodyText>
       </span>
     </section>
@@ -58,7 +59,7 @@ export const HomeHero = () => {
       >
         <ProfileImage
           src="/images/laurence_halpin.png"
-          alt="Laurence Halpin"
+          alt="Laurence Halpin, hypnotherapist based in Chorley"
           shape="circle"
           containerClassName="bg-transparent"
         />
