@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <main className="min-h-screen flex items-center justify-center" role="main">
+    <main className="mt-10 flex items-center justify-center" role="main">
       <section aria-labelledby="contact-heading">
         <h1 id="contact-heading" className="text-4xl font-bold">
           Contact
