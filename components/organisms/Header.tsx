@@ -2,6 +2,7 @@ import { Title } from "../atoms/Title";
 import { Subtitle } from "../atoms/Subtitle";
 import { Navigation } from "../molecules/Navigation";
 import { BurgerMenu } from "../atoms/BurgerMenu";
+import { CTALink } from "../atoms/CTALink";
 import Link from "next/link";
 
 const navigationLinks = [
@@ -48,10 +49,16 @@ export const Header = () => {
               </span>
             </Link>
           </div>
-          <div className="flex justify-end">
-            <Navigation links={navigationLinks} />
-            <div className="lg:hidden">
-              <BurgerMenu links={navigationLinks} />
+          <div className="flex flex-col items-end gap-2">
+            <div className="hidden lg:flex gap-8 mb-1 self-center">
+              <CTALink href="/about#testimonials">⭐ Testimonials</CTALink>
+              <CTALink href="/contact">📩 Get in touch</CTALink>
+            </div>
+            <div className="flex justify-end">
+              <Navigation links={navigationLinks} />
+              <div className="lg:hidden">
+                <BurgerMenu links={navigationLinks} />
+              </div>
             </div>
           </div>
         </div>

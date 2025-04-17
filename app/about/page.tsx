@@ -30,7 +30,7 @@ export default function About() {
 
       <section
         id="about-hypnotherapy"
-        className="min-h-screen flex items-center justify-center bg-gray-50"
+        className="min-h-screen flex items-center justify-center "
         aria-labelledby="about-hypnotherapy-heading"
       >
         <h2 id="about-hypnotherapy-heading" className="text-4xl font-bold">
@@ -50,7 +50,7 @@ export default function About() {
 
       <section
         id="articles"
-        className="min-h-screen flex items-center justify-center bg-gray-50"
+        className="min-h-screen flex items-center justify-center "
         aria-labelledby="articles-heading"
       >
         <h2 id="articles-heading" className="text-4xl font-bold">
