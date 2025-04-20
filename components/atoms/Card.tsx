@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { Title } from "./Title";
 
 interface CardProps {
   title: string;
@@ -7,12 +8,12 @@ interface CardProps {
 
 export default function Card({ title, icon }: CardProps) {
   return (
-    <div className="bg-[var(--color-cream)] p-4 rounded-lg shadow-sm border border-[var(--color-sage-200)] transition-transform hover:translate-y-[-2px]">
-      <h3 className="text-[var(--color-forest)] text-lg font-semibold mb-2 font-primary">
-        {title}
-      </h3>
-      <div className="flex justify-center items-center text-[var(--color-sage)]">
-        {icon}
+    <div className="bg-mint-400 p-6 rounded-lg shadow-sm border-4 border-sage-800 transition-transform hover:translate-y-[-4px] hover:scale-105 text-center h-full flex flex-col">
+      <div className="flex-1 flex flex-col justify-between gap-6">
+        <span className="text-xl font-semibold">
+          <Title>{title}</Title>
+        </span>
+        <div className="flex justify-center items-center text-4xl">{icon}</div>
       </div>
     </div>
   );
