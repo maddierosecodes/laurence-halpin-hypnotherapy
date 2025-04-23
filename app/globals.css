@@ -74,3 +74,53 @@
   --color-ink-800: #000a0d;
   --color-ink-900: #000407;
 }
+
+@layer base {
+  html {
+    scroll-padding-top: 12rem; /* Adjust this value to match your header height */
+  }
+}
+
+@layer components {
+  /* Original classes for light backgrounds */
+  .highlight-mint {
+    color: var(--color-mint-700);
+    font-weight: 600;
+  }
+
+  .highlight-sage {
+    color: var(--color-sage-600);
+    font-weight: 600;
+  }
+
+  .emphasis-text {
+    color: var(--color-forest-600);
+    font-style: italic;
+  }
+
+  .highlight-text {
+    color: var(--color-forest-600);
+    font-weight: 600;
+  }
+
+  /* New classes for dark backgrounds */
+  .highlight-mint-dark {
+    color: var(--color-mint-300);
+    font-weight: 700;
+  }
+
+  .highlight-sage-dark {
+    color: var(--color-sage-200);
+    font-weight: 600;
+  }
+
+  .emphasis-text-dark {
+    color: var(--color-sage-100);
+    font-style: italic;
+  }
+
+  .highlight-text-dark {
+    color: var(--color-cream-100);
+    font-weight: 700;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Title } from "../atoms/Title";
 export default function Hypnotherapy() {
   return (
     <section
@@ -7,9 +7,9 @@ export default function Hypnotherapy() {
       className="mt-10 flex items-center justify-center"
       aria-labelledby="hypnotherapy-heading"
     >
-      <h1 id="hypnotherapy-heading" className="text-4xl font-bold">
-        Hypnotherapy
-      </h1>
+      <span className="text-4xl font-bold">
+        <Title>Hypnotherapy</Title>
+      </span>
     </section>
   );
 }

@@ -13,9 +13,17 @@ const navigationLinks = [
     label: "About",
     dropdownItems: [
       { href: "/about", label: "About Laurence" },
-      { href: "/about#about-hypnotherapy", label: "About Hypnotherapy" },
+      {
+        href: "/about#qualifications",
+        label: "Training, Qualifications & Memberships",
+      },
+      {
+        href: "/about#about-hypnotherapy",
+        label: "Solutions Focussed Hypnotherapy",
+      },
+      { href: "/about#solutions-list", label: "Solutions" },
       // { href: "/about#testimonials", label: "Testimonials" },
-      { href: "/about#articles", label: "Articles" },
+      // { href: "/about#articles", label: "Articles" },
     ],
   },
   {

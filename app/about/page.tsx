@@ -1,8 +1,11 @@
 import { Metadata } from "next";
 import AboutLaurence from "@/components/organisms/AboutLaurence";
 import AboutHypnotherapy from "@/components/organisms/AboutHypnotherapy";
+import SolutionsHypnotherapyList from "@/components/organisms/SolutionsHypnotherapyList";
+import Qualifications from "@/components/organisms/Qualifications";
+import SectionWrapper from "@/components/atoms/SectionWrapper";
 // import Testimonials from "@/components/organisms/Testimonials";
-import Articles from "@/components/organisms/Articles";
+// import Articles from "@/components/organisms/Articles";
 
 export const metadata: Metadata = {
   title: "About",
@@ -22,10 +25,21 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <main className="mt-10" role="main">
-      <AboutLaurence />
-      <AboutHypnotherapy />
-      {/* <Testimonials /> */}
-      <Articles />
+      <SectionWrapper>
+        <AboutLaurence />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <Qualifications />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <AboutHypnotherapy />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <SolutionsHypnotherapyList />
+      </SectionWrapper>
     </main>
   );
 }

@@ -49,21 +49,23 @@ export const HomeHero = () => {
   );
 
   const imageContent = (
-    <div className="relative w-full h-full overflow-visible">
-      <div className="absolute inset-0 overflow-visible">
-        <BlobSvg className="w-full h-full overflow-visible" />
+    <div className="relative w-full h-full flex justify-center items-center">
+      <div className="relative w-64 h-64 lg:w-[32rem] lg:h-[32rem]">
+        <div className="absolute inset-0 overflow-visible z-0">
+          <BlobSvg className="w-full h-full overflow-visible" />
+        </div>
+        <figure
+          className="relative w-full h-full z-10"
+          aria-label="Profile image"
+        >
+          <ProfileImage
+            src="/images/laurence_bg.png"
+            alt="Laurence Halpin, hypnotherapist based in Chorley"
+            shape="circle"
+            containerClassName="bg-transparent w-full h-full -translate-y-3"
+          />
+        </figure>
       </div>
-      <figure
-        className="w-64 h-64 lg:w-[32rem] lg:h-[32rem] relative z-10"
-        aria-label="Profile image"
-      >
-        <ProfileImage
-          src="/images/laurence_bg.png"
-          alt="Laurence Halpin, hypnotherapist based in Chorley"
-          shape="circle"
-          containerClassName="bg-transparent"
-        />
-      </figure>
     </div>
   );
 
@@ -72,7 +74,7 @@ export const HomeHero = () => {
       textComponent={textContent}
       imageComponent={imageContent}
       imagePosition={isMobile ? "left" : "right"}
-      className="pt-28 lg:pt-32"
+      className="mt-10 lg:pt-20 overflow-hidden"
     />
   );
 };
