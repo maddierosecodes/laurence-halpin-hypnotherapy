@@ -58,7 +58,7 @@ export const HomeHero = () => {
         aria-label="Profile image"
       >
         <ProfileImage
-          src="/images/laurence_halpin.png"
+          src="/images/laurence_bg.png"
           alt="Laurence Halpin, hypnotherapist based in Chorley"
           shape="circle"
           containerClassName="bg-transparent"

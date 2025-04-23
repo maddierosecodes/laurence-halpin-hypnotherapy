@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import nchLogo from "@/public/images/nch.png";
-import mafsfhLogo from "@/public/images/afsfh.png";
-import cnhcLogo from "@/public/images/cnhc.png";
+import nchLogo from "@/public/images/NCH.png";
+import mafsfhLogo from "@/public/images/AfSFH.png";
+import cnhcLogo from "@/public/images/CNHC.jpeg";
 import { FcDiploma1, FcDiploma2 } from "react-icons/fc";
 import { FaBrain } from "react-icons/fa";
 import CardDisplay from "../molecules/CardDisplay";
@@ -104,7 +104,7 @@ export default function AboutLaurence() {
         src="/images/laurence_halpin.png"
         alt="Laurence Halpin"
         shape="circle"
-        containerClassName="bg-ink-400 p-4"
+        containerClassName="p-4"
       />
     </div>
   );
