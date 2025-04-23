@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import AboutLaurence from "@/components/organisms/AboutLaurence";
 import AboutHypnotherapy from "@/components/organisms/AboutHypnotherapy";
-import Testimonials from "@/components/organisms/Testimonials";
+// import Testimonials from "@/components/organisms/Testimonials";
 import Articles from "@/components/organisms/Articles";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export default function About() {
     <main className="mt-10" role="main">
       <AboutLaurence />
       <AboutHypnotherapy />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Articles />
     </main>
   );

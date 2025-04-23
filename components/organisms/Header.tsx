@@ -4,16 +4,17 @@ import { Navigation } from "../molecules/Navigation";
 import { BurgerMenu } from "../atoms/BurgerMenu";
 import { CTALink } from "../atoms/CTALink";
 import Link from "next/link";
+import { BodyText } from "../atoms/BodyText";
 
 const navigationLinks = [
   { href: "/", label: "Home" },
   {
-    href: "/about#about-laurence",
+    href: "/about",
     label: "About",
     dropdownItems: [
-      { href: "/about#about-laurence", label: "About Laurence" },
+      { href: "/about", label: "About Laurence" },
       { href: "/about#about-hypnotherapy", label: "About Hypnotherapy" },
-      { href: "/about#testimonials", label: "Testimonials" },
+      // { href: "/about#testimonials", label: "Testimonials" },
       { href: "/about#articles", label: "Articles" },
     ],
   },
@@ -54,7 +55,11 @@ export const Header = () => {
           </div>
           <div className="flex flex-col items-end gap-2">
             <div className="hidden lg:flex gap-8 mb-1 self-center">
-              <CTALink href="/about#testimonials">⭐ Testimonials</CTALink>
+              <span className="flex items-center gap-2">
+                <BodyText>📞 07951652175</BodyText>
+              </span>
+
+              {/* <CTALink href="/about#testimonials">⭐ Testimonials</CTALink> */}
               <CTALink href="/contact">📩 Get in touch</CTALink>
             </div>
             <div className="flex justify-end">
