@@ -84,12 +84,12 @@
 @layer components {
   /* Original classes for light backgrounds */
   .highlight-mint {
-    color: var(--color-mint-700);
+    color: var(--color-mint-800);
     font-weight: 600;
   }
 
   .highlight-sage {
-    color: var(--color-sage-600);
+    color: var(--color-sage-700);
     font-weight: 600;
   }
 

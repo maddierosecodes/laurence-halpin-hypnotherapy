@@ -44,7 +44,7 @@ export const colourStyles: Record<TextColour, string> = {
   ink: "text-ink-400",
   forest: "text-forest-500",
   sage: "text-sage-600",
-  mint: "text-mint-600",
+  mint: "text-mint-800",
   cream: "text-cream-50",
 };
 

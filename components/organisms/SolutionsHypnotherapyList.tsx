@@ -15,102 +15,134 @@ import Card from "../atoms/Card";
 import Link from "next/link";
 import { Title } from "../atoms/Title";
 import { BodyText } from "../atoms/BodyText";
+import Script from "next/script";
 
 const treatmentAreas = [
   {
     name: "Stress",
-    icon: <FaHeartbeat className="w-8 h-8" />,
+    icon: <FaHeartbeat className="w-8 h-8" aria-hidden="true" />,
     href: "services#hypnotherapy",
   },
   {
     name: "Anxiety",
-    icon: <MdOutlinePsychology className="w-8 h-8" />,
+    icon: <MdOutlinePsychology className="w-8 h-8" aria-hidden="true" />,
     href: "services#hypnotherapy",
   },
   {
     name: "Stop Smoking",
-    icon: <FaSmokingBan className="w-8 h-8" />,
+    icon: <FaSmokingBan className="w-8 h-8" aria-hidden="true" />,
     href: "services#stop-smoking",
   },
   {
     name: "Phobias",
-    icon: <FaBrain className="w-8 h-8" />,
+    icon: <FaBrain className="w-8 h-8" aria-hidden="true" />,
     href: "services#overcome-phobias",
   },
   {
     name: "Depression",
-    icon: <TbMoodPlus className="w-8 h-8" />,
+    icon: <TbMoodPlus className="w-8 h-8" aria-hidden="true" />,
     href: "services#hypnotherapy",
   },
   {
     name: "Insomnia",
-    icon: <FaBed className="w-8 h-8" />,
+    icon: <FaBed className="w-8 h-8" aria-hidden="true" />,
     href: "services#hypnotherapy",
   },
-
   {
     name: "Confidence",
-    icon: <FaUserFriends className="w-8 h-8" />,
+    icon: <FaUserFriends className="w-8 h-8" aria-hidden="true" />,
     href: "services#hypnotherapy",
   },
-
   {
     name: "Weight Management",
-    icon: <FaWeight className="w-8 h-8" />,
+    icon: <FaWeight className="w-8 h-8" aria-hidden="true" />,
     href: "services#hypnotherapy",
   },
   {
     name: "Irritable Bowel Syndrome",
-    icon: <GiStomach className="w-8 h-8" />,
+    icon: <GiStomach className="w-8 h-8" aria-hidden="true" />,
     href: "services#hypnotherapy",
   },
   {
     name: "OCD",
-    icon: <FaBrain className="w-8 h-8" />,
+    icon: <FaBrain className="w-8 h-8" aria-hidden="true" />,
     href: "services#hypnotherapy",
   },
   {
     name: "Dependency",
-    icon: <FaPills className="w-8 h-8" />,
+    icon: <FaPills className="w-8 h-8" aria-hidden="true" />,
     href: "services#hypnotherapy",
   },
-
   {
     name: "Performance",
-    icon: <FaRunning className="w-8 h-8" />,
+    icon: <FaRunning className="w-8 h-8" aria-hidden="true" />,
     href: "services#hypnotherapy",
   },
 ];
 
 export default function SolutionsHypnotherapyList() {
   return (
-    <section
-      id="solutions-list"
-      className="flex flex-col items-center justify-center text-center mx-auto px-4 max-w-7xl mb-10 mt-10"
-    >
-      <Title size="3xl" colour="forest" weight="bold">
-        Solution Focused Hypnotherapy can help you with:
-      </Title>
+    <>
+      <Script
+        id="treatment-areas-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            name: "Laurence Halpin Hypnotherapy",
+            description:
+              "Professional hypnotherapy services offering treatment for various conditions including anxiety, stress, phobias, and more.",
+            medicalSpecialty: {
+              "@type": "MedicalSpecialty",
+              name: "Mental Health",
+            },
+            availableService: treatmentAreas.map((area) => ({
+              "@type": "MedicalTherapy",
+              name: area.name,
+              description: `Professional hypnotherapy treatment for ${area.name.toLowerCase()}`,
+            })),
+          }),
+        }}
+      />
+      <section
+        id="solutions-list"
+        className="flex flex-col items-center justify-center text-center mx-auto px-4 max-w-7xl mb-10 mt-10"
+        aria-labelledby="solutions-list-heading"
+      >
+        <h2 id="solutions-list-heading" className="sr-only">
+          Treatment Areas
+        </h2>
+        <Title size="3xl" colour="forest" weight="bold">
+          Solution Focused Hypnotherapy can help you with:
+        </Title>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 pt-10 pb-5 w-full">
-        {treatmentAreas.map((area, index) => (
-          <Link
-            key={area.name + index}
-            href={area.href}
-            className="cursor-pointer"
+        <nav aria-label="Treatment areas navigation">
+          <ul
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 pt-10 pb-5 w-full"
+            role="list"
           >
-            {" "}
-            <Card title={area.name} icon={area.icon} />{" "}
-          </Link>
-        ))}
-      </div>
+            {treatmentAreas.map((area, index) => (
+              <li key={area.name + index}>
+                <Link
+                  href={area.href}
+                  className="cursor-pointer block"
+                  aria-label={`Learn more about ${area.name} treatment`}
+                >
+                  <Card title={area.name} icon={area.icon} />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-      <BodyText size="lg" variant="light-bg" weight="bold">
-        <em>
-          Click on the card to find out more about how I can help you with these
-          issues.
-        </em>
-      </BodyText>
-    </section>
+        <BodyText size="lg" variant="light-bg" weight="bold">
+          <em>
+            Click on the card to find out more about how I can help you with
+            these issues.
+          </em>
+        </BodyText>
+      </section>
+    </>
   );
 }

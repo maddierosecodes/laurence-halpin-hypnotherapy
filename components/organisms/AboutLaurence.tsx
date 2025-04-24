@@ -5,9 +5,15 @@ import { BodyText } from "../atoms/BodyText";
 import { Hero } from "../molecules/Hero";
 import { ProfileImage } from "../atoms/ProfileImage";
 import Link from "next/link";
+import Script from "next/script";
+
 export default function AboutLaurence() {
   const heroText = (
-    <div className="flex flex-col items-center text-center xl:pr-10 ">
+    <div
+      className="flex flex-col items-center text-center xl:pr-10"
+      role="article"
+      aria-label="About Laurence Halpin"
+    >
       <Title size="4xl" colour="sage" weight="bold">
         Laurence Halpin
       </Title>
@@ -42,8 +48,9 @@ export default function AboutLaurence() {
           </em>
           . <br />
           <Link
-            className="text-mint-700 hover:text-forest-600 transition-colors duration-300"
+            className="text-forest-800 hover:text-forest-900 underline focus:outline-none focus:ring-2 focus:ring-forest-800 focus:ring-offset-2 transition-colors duration-300"
             href="/contact"
+            aria-label="Contact Laurence to start your hypnotherapy journey"
           >
             Get in touch today
           </Link>{" "}
@@ -55,26 +62,69 @@ export default function AboutLaurence() {
   );
 
   const heroImage = (
-    <div className="w-full max-w-[280px] sm:max-w-md mx-auto aspect-square">
+    <div
+      className="w-full max-w-[280px] sm:max-w-md mx-auto aspect-square"
+      role="img"
+      aria-label="Laurence Halpin's profile image"
+    >
       <ProfileImage
         src="/images/laurence_alt.jpg"
-        alt="Laurence Halpin"
+        alt="Laurence Halpin, a professional hypnotherapist based in Chorley"
         shape="circle"
       />
     </div>
   );
 
   return (
-    <section
-      id="about-laurence"
-      className="mt-4 sm:mt-15 flex flex-col items-center justify-center px-4"
-      aria-labelledby="about-laurence-heading"
-    >
-      <Hero
-        imageComponent={heroImage}
-        textComponent={heroText}
-        imagePosition="left"
+    <>
+      <Script
+        id="laurence-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Laurence Halpin",
+            jobTitle: "Solutions Focused Hypnotherapist",
+            description:
+              "Professional hypnotherapist with over 30 years of mental health experience, specialising in solution-focused hypnotherapy for anxiety, stress, and more.",
+            image:
+              "https://laurencehalpinhypnotherapy.com/images/laurence_alt.jpg",
+            url: "https://laurencehalpinhypnotherapy.com/about",
+            sameAs: [
+              "https://www.facebook.com/laurencehalpinhypnotherapy",
+              "https://www.linkedin.com/in/laurence-halpin",
+            ],
+            knowsAbout: [
+              "Solution Focused Hypnotherapy",
+              "Mental Health",
+              "Anxiety Treatment",
+              "Stress Management",
+              "Stop Smoking",
+              "Phobia Treatment",
+            ],
+            hasCredential: [
+              "Diploma in Solution Focused Hypnotherapy (DSFH)",
+              "Hypnotherapy in Practice Diploma (HPD)",
+              "Registered Mental Health Nurse",
+            ],
+          }),
+        }}
       />
-    </section>
+      <section
+        id="about-laurence"
+        className="mt-4 sm:mt-15 flex flex-col items-center justify-center px-4"
+        aria-labelledby="about-laurence-heading"
+      >
+        <h2 id="about-laurence-heading" className="sr-only">
+          About Laurence Halpin
+        </h2>
+        <Hero
+          imageComponent={heroImage}
+          textComponent={heroText}
+          imagePosition="left"
+        />
+      </section>
+    </>
   );
 }
