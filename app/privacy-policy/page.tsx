@@ -40,9 +40,11 @@ export default function PrivacyPolicy() {
         </button>
         <div className="space-y-8">
           <div className="mb-8">
-            <div className="text-5xl font-bold text-left text-sage-800 mb-8">
-              <Title>Privacy Policy</Title>
-            </div>
+            <Title size="5xl" colour="sage" weight="bold">
+              <Subtitle size="lg" colour="forest" weight="medium">
+                Privacy Policy
+              </Subtitle>
+            </Title>
 
             <div className="text-xl text-sage-700 italic">
               <Subtitle>
@@ -61,24 +63,26 @@ export default function PrivacyPolicy() {
         </div>
 
         <div className="space-y-6">
-          <div className="text-3xl font-semibold text-sage-800">
-            <Title>What Information Is Collected?</Title>
-          </div>
-          <span>
-            <BodyText>
-              When you contact Laurence Halpin via this website, phone, or
-              email, we may collect:
-            </BodyText>
-          </span>
+          <Title size="3xl" colour="sage" weight="semibold">
+            What Information Is Collected?
+          </Title>
+
+          <BodyText size="lg" variant="light-bg">
+            When you contact Laurence Halpin via this website, phone, or email,
+            we may collect:
+          </BodyText>
+
           <ul className="list-disc ml-6 text-sage-700">
             <li>Your name</li>
             <li>Email address</li>
             <li>Telephone number</li>
             <li>Any information you choose to share regarding your enquiry</li>
           </ul>
-          <span>
-            <BodyText>We may also collect:</BodyText>
-          </span>
+
+          <BodyText size="lg" variant="light-bg">
+            We may also collect:
+          </BodyText>
+
           <ul className="list-disc ml-6 text-sage-700">
             <li>
               GP contact details and basic health information (where relevant)
@@ -87,13 +91,15 @@ export default function PrivacyPolicy() {
           </ul>
         </div>
 
-        <div className="space-y-4">
-          <div className="text-sage-800 text-3xl font-semibold block mb-4">
-            <Title>How Is This Information Used?</Title>
-          </div>
-          <span>
-            <BodyText>Your data is used to:</BodyText>
-          </span>
+        <div className="space-y-4 block mb-4">
+          <Title size="3xl" colour="sage" weight="semibold">
+            How Is This Information Used?
+          </Title>
+
+          <BodyText size="lg" variant="light-bg">
+            Your data is used to:
+          </BodyText>
+
           <ul className="list-disc ml-6 text-sage-700">
             <li>Contact you about your enquiry or sessions</li>
             <li>Send recordings or appointment information</li>
@@ -102,9 +108,11 @@ export default function PrivacyPolicy() {
               Ensure suitability for hypnotherapy and safeguard your wellbeing
             </li>
           </ul>
-          <span>
-            <BodyText>We do not:</BodyText>
-          </span>
+
+          <BodyText size="lg" variant="light-bg">
+            We do not:
+          </BodyText>
+
           <ul className="list-disc ml-6 text-sage-700">
             <li>Store your data in a website database</li>
             <li>Receive or retain your payment or bank details</li>
@@ -112,16 +120,16 @@ export default function PrivacyPolicy() {
           </ul>
         </div>
 
-        <div className="space-y-4">
-          <div className="text-sage-800 text-3xl font-semibold block mb-4">
-            <Title>Your Rights Under UK GDPR</Title>
-          </div>
-          <span>
-            <BodyText>
-              Under the UK General Data Protection Regulation (UK GDPR) and the
-              Data Protection Act 2018, you have the right to:
-            </BodyText>
-          </span>
+        <div className="space-y-4 block mb-4">
+          <Title size="3xl" colour="sage" weight="semibold">
+            Your Rights Under UK GDPR
+          </Title>
+
+          <BodyText size="lg" variant="light-bg">
+            Under the UK General Data Protection Regulation (UK GDPR) and the
+            Data Protection Act 2018, you have the right to:
+          </BodyText>
+
           <ul className="list-disc ml-6 text-sage-700 space-y-1">
             <li>
               <strong>Be informed:</strong> This policy explains how your data
@@ -164,13 +172,15 @@ export default function PrivacyPolicy() {
           </ul>
         </div>
 
-        <div className="space-y-4">
-          <div className="text-sage-800 text-3xl font-semibold block mb-4">
-            <Title>Confidentiality and Legal Exceptions</Title>
-          </div>
-          <span>
-            <BodyText>Your information remains confidential unless:</BodyText>
-          </span>
+        <div className="space-y-4 block mb-4">
+          <Title size="3xl" colour="sage" weight="semibold">
+            Confidentiality and Legal Exceptions
+          </Title>
+
+          <BodyText size="lg" variant="light-bg">
+            Your information remains confidential unless:
+          </BodyText>
+
           <ul className="list-disc ml-6 text-sage-700">
             <li>There is a serious risk of harm to yourself or others</li>
             <li>
@@ -183,62 +193,57 @@ export default function PrivacyPolicy() {
           </ul>
         </div>
 
-        <div className="space-y-4">
-          <div className="text-sage-800 text-3xl font-semibold block mb-4">
-            <Title>Cookies</Title>
-          </div>
-          <span>
-            <BodyText>
-              This website may use cookies to analyse traffic and improve user
-              experience. You can disable cookies via your browser settings.
-              Disabling them may affect site functionality.
-            </BodyText>
-          </span>
+        <div className="space-y-4 block mb-4">
+          <Title size="3xl" colour="sage" weight="semibold">
+            Cookies
+          </Title>
+
+          <BodyText size="lg" variant="light-bg">
+            This website may use cookies to analyse traffic and improve user
+            experience. You can disable cookies via your browser settings.
+            Disabling them may affect site functionality.
+          </BodyText>
+        </div>
+
+        <div className="space-y-4 block mb-4">
+          <Title size="3xl" colour="sage" weight="semibold">
+            External Links
+          </Title>
+
+          <BodyText size="lg" variant="light-bg">
+            This site may contain links to other websites. Once you leave this
+            site, Halpin Therapies Ltd is not responsible for how other sites
+            manage your data. Please review their privacy policies.
+          </BodyText>
+        </div>
+
+        <div className="space-y-4 block mb-4">
+          <Title size="3xl" colour="sage" weight="semibold">
+            Data Protection Registration
+          </Title>
+
+          <BodyText size="lg" variant="light-bg">
+            Halpin Therapies Ltd is registered with the UK Information
+            Commissioner&apos;s Office (ICO). Registration number:{" "}
+            <strong>[INSERT ICO NUMBER HERE]</strong>.
+          </BodyText>
         </div>
 
         <div className="space-y-4">
-          <div className="text-sage-800 text-3xl font-semibold block mb-4">
-            <Title>External Links</Title>
-          </div>
-          <span>
-            <BodyText>
-              This site may contain links to other websites. Once you leave this
-              site, Halpin Therapies Ltd is not responsible for how other sites
-              manage your data. Please review their privacy policies.
-            </BodyText>
-          </span>
-        </div>
-
-        <div className="space-y-4">
-          <div className="text-sage-800 text-3xl font-semibold block mb-4">
-            <Title>Data Protection Registration</Title>
-          </div>
-          <span>
-            <BodyText>
-              Halpin Therapies Ltd is registered with the UK Information
-              Commissioner&apos;s Office (ICO). Registration number:{" "}
-              <strong>[INSERT ICO NUMBER HERE]</strong>.
-            </BodyText>
-          </span>
-        </div>
-
-        <div className="space-y-4">
-          <span>
-            <BodyText>
-              If you have any questions about this policy or your personal data,
-              please contact:
-              <br />
-              <strong>Laurence Halpin</strong>
-              <br />
-              Email:{" "}
-              <a
-                href="mailto:laurence@lhhypnotherapy.co.uk"
-                className="underline"
-              >
-                laurence@lhhypnotherapy.co.uk
-              </a>
-            </BodyText>
-          </span>
+          <BodyText size="lg" variant="light-bg">
+            If you have any questions about this policy or your personal data,
+            please contact:
+            <br />
+            <strong>Laurence Halpin</strong>
+            <br />
+            Email:{" "}
+            <a
+              href="mailto:laurence@lhhypnotherapy.co.uk"
+              className="underline"
+            >
+              laurence@lhhypnotherapy.co.uk
+            </a>
+          </BodyText>
         </div>
       </section>
     </main>

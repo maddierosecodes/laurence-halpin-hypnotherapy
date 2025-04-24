@@ -1,11 +1,31 @@
-import { ReactNode } from "react";
+import {
+  TextAtomProps,
+  sizeStyles,
+  colourStyles,
+  weightStyles,
+  variantStyles,
+} from "../../types/TextAtom.types";
 
-interface SubtitleProps {
-  children: ReactNode;
-}
+export const Subtitle = ({
+  children,
+  size = "md",
+  lgSize,
+  colour,
+  weight = "normal",
+  variant = "default",
+}: TextAtomProps) => {
+  const baseStyles = "leading-normal font-secondary";
+  const sizeStyle = sizeStyles[size];
+  const lgSizeStyle = lgSize ? `lg:${sizeStyles[lgSize]}` : "";
+  const colourStyle = colour ? colourStyles[colour] : "mint";
+  const weightStyle = weightStyles[weight];
+  const variantStyle = variantStyles[variant];
 
-export const Subtitle = ({ children }: SubtitleProps) => {
   return (
-    <p className={`font-normal leading-normal font-secondary`}>{children}</p>
+    <p
+      className={`${baseStyles} ${sizeStyle} ${lgSizeStyle} ${colourStyle} ${weightStyle} ${variantStyle}`}
+    >
+      {children}
+    </p>
   );
 };

@@ -28,23 +28,21 @@ export const HomeHero = () => {
       aria-label="Introduction"
     >
       <header className="flex flex-col gap-2">
-        <span className="text-5xl lg:text-8xl text-sage-700">
-          <Title>
-            Laurence
-            <br />
-            Halpin
-          </Title>
-        </span>
-        <span className="text-2xl lg:text-3xl text-mint-700">
-          <Subtitle>Solutions Focused Hypnotherapy</Subtitle>
-        </span>
+        <Title size="5xl" lgSize="8xl" colour="sage" weight="bold">
+          Laurence
+          <br />
+          Halpin
+        </Title>
+
+        <Subtitle size="2xl" lgSize="3xl" colour="mint" weight="medium">
+          Solutions Focused Hypnotherapy
+        </Subtitle>
       </header>
-      <span className="text-xl lg:text-2xl text-ink-400">
-        <BodyText>
-          Helping you overcome anxiety, manage stress, <br />
-          and build lasting confidence through evidence-based hypnotherapy
-        </BodyText>
-      </span>
+
+      <BodyText size="xl" variant="light-bg">
+        Helping you overcome anxiety, manage stress, <br />
+        and build lasting confidence through evidence-based hypnotherapy
+      </BodyText>
     </section>
   );
 

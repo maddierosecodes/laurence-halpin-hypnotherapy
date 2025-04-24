@@ -53,19 +53,20 @@ export const Header = () => {
               className="flex flex-col items-start"
               aria-label="Laurence Halpin Hypnotherapist - Home"
             >
-              <span className="text-4xl text-sage-800">
-                <Title>Laurence Halpin</Title>
-              </span>
-              <span className="text-xl text-mint-800">
-                <Subtitle>Hypnotherapist</Subtitle>
-              </span>
+              <Title size="4xl" colour="sage" weight="bold">
+                Laurence Halpin
+              </Title>
+
+              <Subtitle size="xl" colour="mint" weight="medium">
+                Solutions Focussed Hypnotherapist
+              </Subtitle>
             </Link>
           </div>
           <div className="flex flex-col items-end gap-2">
-            <div className="hidden lg:flex gap-8 mb-1 self-center">
-              <span className="flex items-center gap-2">
-                <BodyText>📞 07951652175</BodyText>
-              </span>
+            <div className="hidden lg:flex gap-8 mb-1 self-center flex items-center gap-2">
+              <BodyText size="md" variant="light-bg">
+                📞 07951652175
+              </BodyText>
 
               {/* <CTALink href="/about#testimonials">⭐ Testimonials</CTALink> */}
               <CTALink href="/contact">📩 Get in touch</CTALink>

@@ -68,10 +68,11 @@ export default function Qualifications() {
       className=" flex flex-col items-center justify-center px-4 pb-6 sm:pb-10 mt-5"
       aria-labelledby="qualifications-heading"
     >
-      <div className="w-full">
-        <span className="text-xl sm:text-3xl text-center mb-4 sm:mb-6 block text-sage-800">
-          <Title>Training, Qualifications & Memberships</Title>
-        </span>
+      <div className="flex flex-col w-full text-center mb-4 sm:mb-6 block gap-6">
+        <Title size="3xl" colour="forest" weight="bold">
+          Training, Qualifications & Memberships
+        </Title>
+
         <CardDisplay cards={qualificationsAndMemberships} />
       </div>
     </section>

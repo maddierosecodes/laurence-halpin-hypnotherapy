@@ -1,11 +1,29 @@
-import { ReactNode } from "react";
+import {
+  TextAtomProps,
+  sizeStyles,
+  colourStyles,
+  weightStyles,
+  variantStyles,
+} from "../../types/TextAtom.types";
 
-interface BodyTextProps {
-  children: ReactNode;
-}
+export const BodyText = ({
+  children,
+  size = "md",
+  colour,
+  weight = "normal",
+  variant = "default",
+}: TextAtomProps) => {
+  const baseStyles = "leading-relaxed font-main";
+  const sizeStyle = sizeStyles[size];
+  const colourStyle = colour ? colourStyles[colour] : "ink";
+  const weightStyle = weightStyles[weight];
+  const variantStyle = variantStyles[variant];
 
-export const BodyText = ({ children }: BodyTextProps) => {
   return (
-    <p className={` font-normal leading-relaxed font-main `}>{children}</p>
+    <p
+      className={`${baseStyles} ${sizeStyle} ${colourStyle} ${weightStyle} ${variantStyle}`}
+    >
+      {children}
+    </p>
   );
 };

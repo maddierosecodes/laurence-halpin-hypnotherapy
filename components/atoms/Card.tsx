@@ -14,9 +14,10 @@ export default function Card({ title, icon }: CardProps) {
                  hover:-translate-y-1 duration-300"
     >
       <div className="text-sage-600 mb-2">{icon}</div>
-      <span className="text-forest-600 font-secondary text-sm sm:text-base">
-        <Title>{title}</Title>
-      </span>
+
+      <Title size="md" colour="forest" weight="medium">
+        {title}
+      </Title>
     </div>
   );
 }

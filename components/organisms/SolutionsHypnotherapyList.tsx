@@ -84,33 +84,33 @@ const treatmentAreas = [
 
 export default function SolutionsHypnotherapyList() {
   return (
-    <section id="solutions-list" className="mx-auto px-4 max-w-7xl mb-10 mt-10">
-      <div className="flex flex-col items-center">
-        <span className="text-3xl font-bold text-forest-500 text-center mb-6 font-primary">
-          <Title>Solution Focused Hypnotherapy can help you with:</Title>
-        </span>
+    <section
+      id="solutions-list"
+      className="flex flex-col items-center justify-center text-center mx-auto px-4 max-w-7xl mb-10 mt-10"
+    >
+      <Title size="3xl" colour="forest" weight="bold">
+        Solution Focused Hypnotherapy can help you with:
+      </Title>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 pt-10 pb-5 w-full">
-          {treatmentAreas.map((area, index) => (
-            <Link
-              key={area.name + index}
-              href={area.href}
-              className="cursor-pointer"
-            >
-              {" "}
-              <Card title={area.name} icon={area.icon} />{" "}
-            </Link>
-          ))}
-        </div>
-        <span className="text-xl font-bold text-forest-500 text-center mb-6 font-primary">
-          <BodyText>
-            <em>
-              Click on the card to find out more about how I can help you with
-              these issues.
-            </em>
-          </BodyText>
-        </span>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 pt-10 pb-5 w-full">
+        {treatmentAreas.map((area, index) => (
+          <Link
+            key={area.name + index}
+            href={area.href}
+            className="cursor-pointer"
+          >
+            {" "}
+            <Card title={area.name} icon={area.icon} />{" "}
+          </Link>
+        ))}
       </div>
+
+      <BodyText size="lg" variant="light-bg" weight="bold">
+        <em>
+          Click on the card to find out more about how I can help you with these
+          issues.
+        </em>
+      </BodyText>
     </section>
   );
 }

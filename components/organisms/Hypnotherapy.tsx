@@ -7,9 +7,9 @@ export default function Hypnotherapy() {
       className="mt-10 flex items-center justify-center"
       aria-labelledby="hypnotherapy-heading"
     >
-      <span className="text-4xl font-bold">
-        <Title>Hypnotherapy</Title>
-      </span>
+      <Title size="4xl" weight="bold">
+        Hypnotherapy
+      </Title>
     </section>
   );
 }

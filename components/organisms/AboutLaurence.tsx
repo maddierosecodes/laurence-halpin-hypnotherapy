@@ -8,14 +8,16 @@ import Link from "next/link";
 export default function AboutLaurence() {
   const heroText = (
     <div className="flex flex-col items-center text-center xl:pr-10 ">
-      <span className="text-2xl sm:text-3xl md:text-4xl text-sage-800">
-        <Title>Laurence Halpin</Title>
-      </span>
-      <span className="text-lg sm:text-xl text-mint-800">
-        <Subtitle>Solutions Focussed Hypnotherapist</Subtitle>
-      </span>
+      <Title size="4xl" colour="sage" weight="bold">
+        Laurence Halpin
+      </Title>
+
+      <Subtitle size="xl" colour="mint" weight="medium">
+        Solutions Focussed Hypnotherapist
+      </Subtitle>
+
       <span className="max-w-3xl my-4 sm:my-8 text-base sm:text-lg text-ink-500">
-        <BodyText>
+        <BodyText size="lg" variant="light-bg">
           Hi - I&apos;m Laurence. I have{" "}
           <strong className="highlight-text">over 30 years experience</strong>{" "}
           supporting people with their mental health as a{" "}
