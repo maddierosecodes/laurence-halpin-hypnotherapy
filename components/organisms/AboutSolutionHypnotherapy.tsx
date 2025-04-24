@@ -8,7 +8,7 @@ export default function AboutHypnotherapy() {
   return (
     <>
       <Script
-        id="hypnotherapy-schema"
+        id="solution-focused-hypnotherapy-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -37,11 +37,14 @@ export default function AboutHypnotherapy() {
         }}
       />
       <section
-        id="about-hypnotherapy"
+        id="about-solution-focused-hypnotherapy"
         className="pt-8"
-        aria-labelledby="about-hypnotherapy-heading"
+        aria-labelledby="about-solution-focused-hypnotherapy-heading"
       >
-        <h2 id="about-hypnotherapy-heading" className="sr-only">
+        <h2
+          id="about-solution-focused-hypnotherapy-heading"
+          className="sr-only"
+        >
           About Solution Focused Hypnotherapy
         </h2>
         <div className="container mx-auto px-4 mb-8 text-center">

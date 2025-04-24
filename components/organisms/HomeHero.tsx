@@ -35,7 +35,7 @@ export const HomeHero = () => {
         </Title>
 
         <Subtitle size="2xl" lgSize="3xl" colour="mint" weight="medium">
-          Solutions Focused Hypnotherapy
+          Solution Focused Hypnotherapy
         </Subtitle>
       </header>
 

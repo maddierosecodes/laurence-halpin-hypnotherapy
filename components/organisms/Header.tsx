@@ -18,19 +18,22 @@ const navigationLinks = [
         label: "Training, Qualifications & Memberships",
       },
       {
-        href: "/about#about-hypnotherapy",
-        label: "Solutions Focussed Hypnotherapy",
+        href: "/about#about-solution-focused-hypnotherapy",
+        label: "Solution Focussed Hypnotherapy",
       },
-      { href: "/about#solutions-list", label: "Solutions" },
+      { href: "/about#solution-list", label: "Solutions" },
       // { href: "/about#testimonials", label: "Testimonials" },
       // { href: "/about#articles", label: "Articles" },
     ],
   },
   {
-    href: "/services#hypnotherapy",
+    href: "/services#solutionhypnotherapy",
     label: "Services",
     dropdownItems: [
-      { href: "/services#hypnotherapy", label: "Hypnotherapy" },
+      {
+        href: "/services#solutionhypnotherapy",
+        label: "Solution Focussed Hypnotherapy",
+      },
       { href: "/services#stop-smoking", label: "Stop Smoking" },
       { href: "/services#overcome-phobias", label: "Overcome Phobias" },
       { href: "/services#pricing", label: "Pricing" },
@@ -58,7 +61,7 @@ export const Header = () => {
               </Title>
 
               <Subtitle size="xl" colour="mint" weight="medium">
-                Solutions Focussed Hypnotherapist
+                Solution Focussed Hypnotherapist
               </Subtitle>
             </Link>
           </div>

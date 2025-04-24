@@ -3,12 +3,12 @@ import { Title } from "../atoms/Title";
 export default function Hypnotherapy() {
   return (
     <section
-      id="hypnotherapy"
+      id="solution-focused-hypnotherapy"
       className="mt-10 flex items-center justify-center"
-      aria-labelledby="hypnotherapy-heading"
+      aria-labelledby="solution-focused-hypnotherapy-heading"
     >
       <Title size="4xl" weight="bold">
-        Hypnotherapy
+        Solution Focused Hypnotherapy
       </Title>
     </section>
   );

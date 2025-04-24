@@ -21,12 +21,12 @@ const treatmentAreas = [
   {
     name: "Stress",
     icon: <FaHeartbeat className="w-8 h-8" aria-hidden="true" />,
-    href: "services#hypnotherapy",
+    href: "services#solutionhypnotherapy",
   },
   {
     name: "Anxiety",
     icon: <MdOutlinePsychology className="w-8 h-8" aria-hidden="true" />,
-    href: "services#hypnotherapy",
+    href: "services#solutionhypnotherapy",
   },
   {
     name: "Stop Smoking",
@@ -41,42 +41,42 @@ const treatmentAreas = [
   {
     name: "Depression",
     icon: <TbMoodPlus className="w-8 h-8" aria-hidden="true" />,
-    href: "services#hypnotherapy",
+    href: "services#solutionhypnotherapy",
   },
   {
     name: "Insomnia",
     icon: <FaBed className="w-8 h-8" aria-hidden="true" />,
-    href: "services#hypnotherapy",
+    href: "services#solutionhypnotherapy",
   },
   {
     name: "Confidence",
     icon: <FaUserFriends className="w-8 h-8" aria-hidden="true" />,
-    href: "services#hypnotherapy",
+    href: "services#solutionhypnotherapy",
   },
   {
     name: "Weight Management",
     icon: <FaWeight className="w-8 h-8" aria-hidden="true" />,
-    href: "services#hypnotherapy",
+    href: "services#solutionhypnotherapy",
   },
   {
     name: "Irritable Bowel Syndrome",
     icon: <GiStomach className="w-8 h-8" aria-hidden="true" />,
-    href: "services#hypnotherapy",
+    href: "services#solutionhypnotherapy",
   },
   {
     name: "OCD",
     icon: <FaBrain className="w-8 h-8" aria-hidden="true" />,
-    href: "services#hypnotherapy",
+    href: "services#solutionhypnotherapy",
   },
   {
     name: "Dependency",
     icon: <FaPills className="w-8 h-8" aria-hidden="true" />,
-    href: "services#hypnotherapy",
+    href: "services#solutionhypnotherapy",
   },
   {
     name: "Performance",
     icon: <FaRunning className="w-8 h-8" aria-hidden="true" />,
-    href: "services#hypnotherapy",
+    href: "services#solutionhypnotherapy",
   },
 ];
 
@@ -90,9 +90,9 @@ export default function SolutionsHypnotherapyList() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
-            name: "Laurence Halpin Hypnotherapy",
+            name: "Laurence Halpin Solution Focussed Hypnotherapy",
             description:
-              "Professional hypnotherapy services offering treatment for various conditions including anxiety, stress, phobias, and more.",
+              "Professional solution focussed hypnotherapy services offering treatment for various conditions including anxiety, stress, phobias, and more.",
             medicalSpecialty: {
               "@type": "MedicalSpecialty",
               name: "Mental Health",
@@ -100,21 +100,21 @@ export default function SolutionsHypnotherapyList() {
             availableService: treatmentAreas.map((area) => ({
               "@type": "MedicalTherapy",
               name: area.name,
-              description: `Professional hypnotherapy treatment for ${area.name.toLowerCase()}`,
+              description: `Professional solution focussed hypnotherapy treatment for ${area.name.toLowerCase()}`,
             })),
           }),
         }}
       />
       <section
-        id="solutions-list"
+        id="solution-list"
         className="flex flex-col items-center justify-center text-center mx-auto px-4 max-w-7xl mb-10 mt-10"
-        aria-labelledby="solutions-list-heading"
+        aria-labelledby="solution-list-heading"
       >
-        <h2 id="solutions-list-heading" className="sr-only">
+        <h2 id="solution-list-heading" className="sr-only">
           Treatment Areas
         </h2>
         <Title size="3xl" colour="forest" weight="bold">
-          Solution Focused Hypnotherapy can help you with:
+          Solution Focussed Hypnotherapy can help you with:
         </Title>
 
         <nav aria-label="Treatment areas navigation">

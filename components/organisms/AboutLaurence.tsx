@@ -19,7 +19,7 @@ export default function AboutLaurence() {
       </Title>
 
       <Subtitle size="xl" colour="mint" weight="medium">
-        Solutions Focussed Hypnotherapist
+        Solution Focussed Hypnotherapist
       </Subtitle>
 
       <span className="max-w-3xl my-4 sm:my-8 text-base sm:text-lg text-ink-500">
@@ -85,7 +85,7 @@ export default function AboutLaurence() {
             "@context": "https://schema.org",
             "@type": "Person",
             name: "Laurence Halpin",
-            jobTitle: "Solutions Focused Hypnotherapist",
+            jobTitle: "Solution Focused Hypnotherapist",
             description:
               "Professional hypnotherapist with over 30 years of mental health experience, specialising in solution-focused hypnotherapy for anxiety, stress, and more.",
             image:

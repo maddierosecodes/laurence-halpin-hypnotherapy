@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import AboutLaurence from "@/components/organisms/AboutLaurence";
-import AboutHypnotherapy from "@/components/organisms/AboutHypnotherapy";
-import SolutionsHypnotherapyList from "@/components/organisms/SolutionsHypnotherapyList";
+import AboutSolutionHypnotherapy from "@/components/organisms/AboutSolutionHypnotherapy";
+import SolutionHypnotherapyList from "@/components/organisms/SolutionHypnotherapyList";
 import Qualifications from "@/components/organisms/Qualifications";
 import SectionWrapper from "@/components/atoms/SectionWrapper";
 // import Testimonials from "@/components/organisms/Testimonials";
@@ -91,12 +91,19 @@ export default function About() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <AboutHypnotherapy />
+        <AboutSolutionHypnotherapy />
       </SectionWrapper>
 
       <SectionWrapper>
-        <SolutionsHypnotherapyList />
+        <SolutionHypnotherapyList />
       </SectionWrapper>
+
+      {/* <SectionWrapper>
+        <Testimonials />
+      </SectionWrapper>
+      <SectionWrapper>
+        <Articles />
+      </SectionWrapper> */}
     </main>
   );
 }
