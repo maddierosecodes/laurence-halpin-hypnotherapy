@@ -12,7 +12,7 @@ interface CardDisplayProps {
 
 export default function CardDisplay({ cards }: CardDisplayProps) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full max-w-6xl mx-auto auto-rows-fr px-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 pt-10 pb-5 w-full">
       {cards.map((card, index) => (
         <Card key={index} title={card.title} icon={card.icon} />
       ))}
