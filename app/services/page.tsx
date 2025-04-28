@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function Services() {
   return (
-    <main className="mt-10" role="main">
+    <main role="main">
       <SectionWrapper>
         <SolutionHypnotherapy />
       </SectionWrapper>
