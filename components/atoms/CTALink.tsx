@@ -10,7 +10,7 @@ export const CTALink = ({ href, children }: CTALinkProps) => {
   return (
     <Link
       href={href}
-      className="bg-cream hover:bg-sage-200 text-center text-forest-500 border-4 border-mint-500 font-main text-md font-bold px-6 py-1 rounded-full shadow-sm transition hover:scale-105"
+      className="inline-block bg-cream hover:bg-sage-200 text-center text-forest-500 border-4 border-mint-500 font-main text-md font-bold px-6 py-2 rounded-full shadow-sm transition hover:scale-105 leading-tight break-words transition-transform duration-150 ease-in-out"
     >
       {children}
     </Link>
