@@ -94,53 +94,53 @@ export default function AboutHypnotherapy() {
             </div>
           </div>
 
-          <div className="relative mb-12 max-w-5xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 items-center lg:items-start justify-center">
-              <div
-                className="w-full lg:w-[400px] aspect-[4/3] relative rounded-2xl overflow-hidden"
-                role="img"
-                aria-label="Brain transformation concept"
-              >
+          <div className="relative mb-12 max-w-5xl mx-auto flex flex-col lg:flex-row gap-4 lg:gap-8 items-center lg:items-start justify-center">
+            <div
+              className="w-full lg:w-[400px] relative rounded-2xl overflow-hidden max-h-[500px] lg:max-h-[400px]"
+              role="img"
+              aria-label="Brain transformation concept"
+            >
+              <div className="aspect-[5/3] relative w-full h-full">
                 <Image
                   src="/images/butterfly_brain.jpg"
                   alt="Butterfly brain transformation concept - representing the positive changes possible through hypnotherapy"
                   fill
-                  className="object-cover"
+                  className="object-cover object-bottom"
                 />
               </div>
-              <div
-                className="w-full lg:w-[550px] bg-sage-900/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl"
-                role="article"
-                aria-label="Explanation of hypnosis"
-              >
-                <BodyText variant="dark-bg" size="lg" colour="cream">
-                  <strong className="highlight-text-dark">
-                    Hypnosis helps calm the mind and body
-                  </strong>
-                  , easing anxiety through
-                  <strong className="highlight-mint-dark">
-                    {" "}
-                    relaxation and visualisation
-                  </strong>
-                  . In this natural,
-                  <em className="emphasis-text-dark"> trance-like state</em>,
-                  your brain becomes more open to positive suggestion, making it
-                  easier to shift perspective. You remain{" "}
-                  <strong className="highlight-text-dark">
-                    fully aware and in control
-                  </strong>
-                  , but deeply relaxed. This state supports{" "}
-                  <strong className="highlight-mint-dark">
-                    focus on the positives
-                  </strong>{" "}
-                  in your life and unlocks inner resources, encouraging
-                  <em className="emphasis-text-dark">
-                    {" "}
-                    clarity, confidence, and lasting change
-                  </em>
-                  .
-                </BodyText>
-              </div>
+            </div>
+            <div
+              className="w-full lg:w-[550px] bg-sage-900/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl"
+              role="article"
+              aria-label="Explanation of hypnosis"
+            >
+              <BodyText variant="dark-bg" size="lg" colour="cream">
+                <strong className="highlight-text-dark">
+                  Hypnosis helps calm the mind and body
+                </strong>
+                , easing anxiety through
+                <strong className="highlight-mint-dark">
+                  {" "}
+                  relaxation and visualisation
+                </strong>
+                . In this natural,
+                <em className="emphasis-text-dark"> trance-like state</em>, your
+                brain becomes more open to positive suggestion, making it easier
+                to shift perspective. You remain{" "}
+                <strong className="highlight-text-dark">
+                  fully aware and in control
+                </strong>
+                , but deeply relaxed. This state supports{" "}
+                <strong className="highlight-mint-dark">
+                  focus on the positives
+                </strong>{" "}
+                in your life and unlocks inner resources, encouraging
+                <em className="emphasis-text-dark">
+                  {" "}
+                  clarity, confidence, and lasting change
+                </em>
+                .
+              </BodyText>
             </div>
           </div>
         </div>

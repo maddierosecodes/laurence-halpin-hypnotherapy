@@ -1,5 +1,4 @@
 import { HomeHero } from "@/components/organisms/HomeHero";
-import { CTAsection } from "@/components/organisms/CTAsection";
 import { Metadata } from "next";
 import Script from "next/script";
 
@@ -67,7 +66,6 @@ export default function Home() {
         }}
       />
       <HomeHero />
-      <CTAsection />
     </>
   );
 }

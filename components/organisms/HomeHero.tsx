@@ -7,6 +7,7 @@ import { BodyText } from "../atoms/BodyText";
 import { Hero } from "../molecules/Hero";
 import { useEffect, useState } from "react";
 import BlobSvg from "@/public/svg/blob.svg";
+import { CTAsection } from "./CTAsection";
 
 export const HomeHero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -43,6 +44,7 @@ export const HomeHero = () => {
         Helping you overcome anxiety, manage stress, <br />
         and build lasting confidence through evidence-based hypnotherapy
       </BodyText>
+      <CTAsection />
     </section>
   );
 
