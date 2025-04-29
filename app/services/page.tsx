@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import SolutionHypnotherapy from "@/components/organisms/SolutionHypnotherapy";
 import StopSmoking from "@/components/organisms/StopSmoking";
 import OvercomePhobias from "@/components/organisms/OvercomePhobias";
-import Pricing from "@/components/organisms/Pricing";
+import SessionsAndFees from "@/components/organisms/SessionsAndFees";
 import SectionWrapper from "@/components/atoms/SectionWrapper";
 export const metadata: Metadata = {
   title: "Services",
@@ -32,7 +32,7 @@ export default function Services() {
         <OvercomePhobias />
       </SectionWrapper>
       <SectionWrapper>
-        <Pricing />
+        <SessionsAndFees />
       </SectionWrapper>
     </main>
   );

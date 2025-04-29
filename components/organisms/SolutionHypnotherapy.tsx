@@ -7,6 +7,7 @@ import healthyEatingImage from "@/public/images/healthy_eating.jpg";
 import stressImage from "@/public/images/stress.jpg";
 import anxietyImage from "@/public/images/anxiety.jpg";
 import depressionImage from "@/public/images/depression.jpg";
+import { CTALink } from "../atoms/CTALink";
 
 export default function Hypnotherapy() {
   return (
@@ -66,7 +67,7 @@ export default function Hypnotherapy() {
         </div>
         {/* Text Box Section */}
         <div
-          className="w-full md:w-1/2 bg-sage-900/80 backdrop-blur-sm p-6 rounded-2xl shadow-xl text-center mx-auto"
+          className="w-full md:w-1/2 bg-sage-900/80 backdrop-blur-sm p-6 rounded-2xl shadow-xl text-center mx-auto flex flex-col items-center gap-4"
           role="article"
           aria-label="Explanation of hypnosis"
         >
@@ -109,10 +110,8 @@ export default function Hypnotherapy() {
             Sessions are held{" "}
             <span className="highlight-text-dark">online or in person</span>,
             depending on what suits you best.{" "}
-            <span className="highlight-mint-dark">Get in touch</span> for an
-            initial consultation to see if this feels like the right fit for
-            you.
           </BodyText>
+          <CTALink href="/contact">Book Initial Consultation</CTALink>
         </div>
       </div>
     </section>
