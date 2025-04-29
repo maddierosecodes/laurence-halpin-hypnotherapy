@@ -59,7 +59,7 @@ const treatmentAreas = [
     href: "services#solutionhypnotherapy",
   },
   {
-    name: "Irritable Bowel Syndrome",
+    name: "IBS",
     icon: <GiStomach className="w-8 h-8" aria-hidden="true" />,
     href: "services#solutionhypnotherapy",
   },

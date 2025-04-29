@@ -1,11 +1,9 @@
 interface SectionWrapperProps {
   children: React.ReactNode;
-  className?: string;
 }
 
-export default function SectionWrapper({
-  children,
-  className = "",
-}: SectionWrapperProps) {
-  return <section className={`py-16  ${className}`}>{children}</section>;
+export default function SectionWrapper({ children }: SectionWrapperProps) {
+  return (
+    <section className="py-2 sm:py-4 md:py-8 lg:py-16">{children}</section>
+  );
 }

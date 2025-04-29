@@ -23,95 +23,100 @@ export default function SessionsAndFees() {
   return (
     <section
       id="sessions-and-fees"
-      className="mt-10 mx-auto max-w-7xl px-4 py-12"
+      className="mx-auto max-w-7xl px-4 py-12 xl:border-t-0 border-t border-sage-700"
       aria-labelledby="sessions-and-fees-heading"
     >
       <div className="text-center mb-8">
-        <Title size="6xl" weight="bold" colour="sage">
+        <Title size="4xl" smSize="5xl" lgSize="6xl" weight="bold" colour="sage">
           Sessions & Fees
         </Title>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-8">
-        {/* Left Column (3/5 width) */}
-        <div className="md:w-3/5 space-y-6">
+      {/* Main container with responsive layout */}
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* Left Column (3/5 width on desktop) */}
+        <div className="lg:w-3/5 space-y-6 order-2 lg:order-1">
           {/* Availability Box */}
-          <div
-            className="bg-sage-700 rounded-2xl shadow-xl p-5 flex flex-col items-center"
-            role="article"
-            aria-label="Availability schedule"
-          >
+          <div className="bg-sage-700 rounded-2xl shadow-xl p-5">
             <Subtitle variant="dark-bg" size="3xl" colour="cream" weight="bold">
               Availability
             </Subtitle>
 
-            <div className="w-full bg-sage-200/20 rounded-xl p-3 mt-3">
-              <div className="grid grid-cols-8 gap-1 text-cream">
-                {/* Header Row */}
-                <div className="col-span-1"></div>
-                {days.map((day) => (
-                  <div
-                    key={day}
-                    className="col-span-1 text-center font-bold p-0.5 text-sm"
-                  >
-                    {day}
-                  </div>
-                ))}
-
-                {/* Time Slot Rows */}
-                {timeSlots.map((slot) => (
-                  <React.Fragment key={slot}>
-                    <div className="col-span-1 text-left font-bold p-0.5 text-sm">
-                      {slot}
-                    </div>
+            <div className="relative">
+              <div className="w-full bg-sage-200/20 rounded-xl p-3 mt-3 overflow-x-auto">
+                <div className="min-w-[600px] md:min-w-0">
+                  <div className="grid grid-cols-8 gap-x-1 gap-y-2 text-cream">
+                    {/* Header Row */}
+                    <div className="col-span-1"></div>
                     {days.map((day) => (
                       <div
-                        key={`${day}-${slot}`}
-                        className="col-span-1 p-0.5 flex items-center justify-center"
+                        key={day}
+                        className="col-span-1 text-center font-bold text-sm"
                       >
-                        <div
-                          className={`w-full h-7 rounded-md flex items-center justify-center ${
-                            availabilityData[
-                              day as keyof typeof availabilityData
-                            ][slot as keyof typeof availabilityData.Mon]
-                              ? "bg-mint-200"
-                              : "bg-cream/20"
-                          }`}
-                        >
-                          {availabilityData[
-                            day as keyof typeof availabilityData
-                          ][slot as keyof typeof availabilityData.Mon] && (
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 24 24"
-                              fill="currentColor"
-                              className="w-4 h-4 text-sage"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                          )}
-                        </div>
+                        {day}
                       </div>
                     ))}
-                  </React.Fragment>
-                ))}
+
+                    {/* Time Slot Rows */}
+                    {timeSlots.map((slot) => (
+                      <React.Fragment key={slot}>
+                        <div className="col-span-1 text-left font-bold text-sm">
+                          {slot}
+                        </div>
+                        {days.map((day) => (
+                          <div
+                            key={`${day}-${slot}`}
+                            className="col-span-1 flex items-center justify-center"
+                          >
+                            <div
+                              className={`w-full h-7 rounded-md flex items-center justify-center ${
+                                availabilityData[
+                                  day as keyof typeof availabilityData
+                                ][slot as keyof typeof availabilityData.Mon]
+                                  ? "bg-mint-200"
+                                  : "bg-cream/20"
+                              }`}
+                            >
+                              {availabilityData[
+                                day as keyof typeof availabilityData
+                              ][slot as keyof typeof availabilityData.Mon] && (
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  fill="currentColor"
+                                  className="w-4 h-4 text-sage"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </React.Fragment>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Scroll Indicator */}
+              <div className="md:hidden">
+                <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-sage-700 to-transparent pointer-events-none" />
+                <p className="text-cream/80 text-xs text-center mt-2 italic">
+                  Scroll horizontally to view full schedule
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Cancellation Notice and Image Side by Side */}
-          <div className="flex flex-col md:flex-row gap-6">
-            {/* Cancellation Notice */}
-            <div
-              className="bg-sage-700 rounded-2xl shadow-xl p-5 flex-1 flex flex-col justify-center items-center"
-              role="article"
-              aria-label="Important information"
-            >
-              <div className="max-w-md flex flex-col gap-2">
+          {/* Important Information and Image Container */}
+          <div className="flex flex-col lg:flex-row gap-6">
+            {/* Important Information Box */}
+            <div className="bg-sage-700 rounded-2xl shadow-xl p-5 flex-1">
+              <div className="flex flex-col gap-2">
                 <Subtitle
                   variant="dark-bg"
                   size="2xl"
@@ -122,7 +127,7 @@ export default function SessionsAndFees() {
                 </Subtitle>
                 <BodyText variant="dark-bg" size="md" colour="cream">
                   <span className="highlight-text-dark">
-                    48 hours' notice is required
+                    48 hours&apos; notice is required
                   </span>{" "}
                   for cancellations. Sessions cancelled late or missed may be
                   charged at the full rate.
@@ -144,8 +149,8 @@ export default function SessionsAndFees() {
               </div>
             </div>
 
-            {/* Head Tendrils Image */}
-            <div className="flex items-center justify-center md:w-1/3 p-2">
+            {/* Head Tendrils Image - Desktop Only */}
+            <div className="hidden lg:flex items-center justify-center lg:w-1/3 p-2">
               <Image
                 src={headTendrils}
                 alt="Relaxing head tendrils illustration"
@@ -155,18 +160,14 @@ export default function SessionsAndFees() {
           </div>
         </div>
 
-        {/* Pricing Column (2/5 width) */}
-        <div className="md:w-2/5">
-          <div
-            className="bg-sage-700 rounded-2xl shadow-xl p-5 flex flex-col h-full"
-            role="article"
-            aria-label="Pricing information"
-          >
+        {/* Right Column (2/5 width on desktop) */}
+        <div className="lg:w-2/5 order-1 lg:order-2">
+          <div className="bg-sage-700 rounded-2xl shadow-xl p-5 lg:h-full lg:py-8">
             <Subtitle variant="dark-bg" size="3xl" colour="cream" weight="bold">
               Pricing
             </Subtitle>
 
-            <div className="space-y-4 text-cream mt-3">
+            <div className="space-y-6 text-cream mt-6">
               <div>
                 <h3 className="text-lg font-bold highlight-text-dark">
                   Initial Consultation – £30

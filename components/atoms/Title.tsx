@@ -1,7 +1,13 @@
 import {
   TextAtomProps,
   sizeStyles,
+  smallSizeStyles,
+  mediumSizeStyles,
+  largeSizeStyles,
   colourStyles,
+  smallColourStyles,
+  mediumColourStyles,
+  largeColourStyles,
   weightStyles,
   variantStyles,
 } from "../../types/TextAtom.types";
@@ -13,23 +19,39 @@ export const Title = ({
   mdSize,
   lgSize,
   colour,
+  smColour,
+  mdColour,
+  lgColour,
   weight = "medium",
   variant = "default",
 }: TextAtomProps) => {
   const baseStyles = "leading-tight font-primary";
   const sizeStyle = sizeStyles[size];
-  const smSizeStyle = smSize ? `sm:${sizeStyles[smSize]}` : "";
-  const mdSizeStyle = mdSize ? `md:${sizeStyles[mdSize]}` : "";
-  const lgSizeStyle = lgSize ? `lg:${sizeStyles[lgSize]}` : "";
-  const colourStyle = colour ? colourStyles[colour] : "sage";
+  const smSizeStyle = smSize ? smallSizeStyles[smSize] : "";
+  const mdSizeStyle = mdSize ? mediumSizeStyles[mdSize] : "";
+  const lgSizeStyle = lgSize ? largeSizeStyles[lgSize] : "";
+  const colourStyle = colour ? colourStyles[colour] : "";
+  const smColourStyle = smColour ? smallColourStyles[smColour] : "";
+  const mdColourStyle = mdColour ? mediumColourStyles[mdColour] : "";
+  const lgColourStyle = lgColour ? largeColourStyles[lgColour] : "";
   const weightStyle = weightStyles[weight];
   const variantStyle = variantStyles[variant];
 
-  return (
-    <h1
-      className={`${baseStyles} ${sizeStyle} ${smSizeStyle} ${mdSizeStyle} ${lgSizeStyle} ${colourStyle} ${weightStyle} ${variantStyle}`}
-    >
-      {children}
-    </h1>
-  );
+  const combinedStyles = [
+    baseStyles,
+    sizeStyle,
+    smSizeStyle,
+    mdSizeStyle,
+    lgSizeStyle,
+    variantStyle,
+    colourStyle,
+    smColourStyle,
+    mdColourStyle,
+    lgColourStyle,
+    weightStyle,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  return <h1 className={combinedStyles}>{children}</h1>;
 };

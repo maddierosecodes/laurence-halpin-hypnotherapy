@@ -15,11 +15,10 @@ export default function OvercomePhobias() {
       aria-label="About Laurence Halpin"
     >
       <div className="text-center mb-6">
-        <Title size="4xl" colour="sage" weight="bold">
+        <Title size="4xl" lgSize="6xl" colour="sage" weight="bold">
           Overcoming Phobias
         </Title>
       </div>
-
       <div className="text-left">
         <ul className="space-y-6">
           <li>
@@ -63,7 +62,7 @@ export default function OvercomePhobias() {
         </ul>
       </div>
 
-      <div className="flex justify-end mt-8">
+      <div className="flex justify-center lg:justify-end mt-8">
         <CTALink href="/contact">
           Book Overcoming Phobias <br />
           Consultation
@@ -73,17 +72,25 @@ export default function OvercomePhobias() {
   );
 
   const heroImage = (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full lg:mt-12">
       <Image
         src={calmingOcean}
         alt="Calm ocean waves for phobia treatment relaxation"
-        className="rounded-xl w-full h-full object-cover aspect-[1/1.2]"
+        className="rounded-xl w-full h-full object-cover aspect-[16/9] lg:aspect-[1/1.2]"
       />
-      <div className="absolute inset-0 flex items-center justify-center p-10 w-2/3">
-        <BodyText size="4xl" colour="cream" weight="bold">
-          &ldquo;Courage doesn&apos;t mean fear disappears — it means choosing
-          growth even when fear is present.&rdquo;
-        </BodyText>
+      <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 lg:p-10 xl:items-start xl:justify-start xl:pt-20">
+        <div className="w-full lg:w-2/3">
+          <BodyText
+            size="2xl"
+            smSize="3xl"
+            lgSize="4xl"
+            colour="cream"
+            weight="bold"
+          >
+            &ldquo;Courage doesn&apos;t mean fear disappears — it means choosing
+            growth even when fear is present.&rdquo;
+          </BodyText>
+        </div>
       </div>
     </div>
   );
@@ -91,7 +98,7 @@ export default function OvercomePhobias() {
   return (
     <section
       id="overcome-phobias"
-      className="mt-10 flex items-center justify-center"
+      className="flex items-center justify-center"
       aria-labelledby="overcome-phobias-heading"
     >
       <Hero

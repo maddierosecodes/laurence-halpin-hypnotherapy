@@ -9,45 +9,114 @@ export default function StopSmoking() {
   return (
     <section
       id="stop-smoking"
-      className="mx-auto px-2 max-w-7xl mb-8"
+      className="mx-auto px-4 sm:px-6 md:px-8 max-w-7xl mb-8"
       aria-labelledby="stop-smoking-heading"
     >
-      <div className="relative w-full mx-auto">
+      {/* Mobile Layout */}
+      <div className="lg:hidden flex flex-col gap-6">
+        <div className="relative w-full">
+          <Image
+            src={stopSmoking}
+            alt="Stop Smoking Hypnotherapy"
+            className="w-full object-cover aspect-[3/2] rounded-xl brightness-[0.85]"
+            priority
+          />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full px-4">
+            <div className="bg-sage-900/60 p-2 rounded-lg inline-block">
+              <Title size="3xl" smSize="4xl" colour="cream" weight="bold">
+                Stop Smoking <br />
+                Session
+              </Title>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          <div className="bg-sage-900/95 p-6 rounded-xl shadow-lg">
+            <BodyText size="lg" colour="cream">
+              <strong className="highlight-text-dark">
+                Stop smoking with just one hypnotherapy session.
+              </strong>{" "}
+              Using a proven approach, Laurence helps you break free from
+              smoking through a single, focused session.
+              <br />
+              <br />
+              <span className="highlight-sage-dark">
+                Hypnosis promotes deep relaxation and strengthens your
+                motivation, making it easier to let go of old habits and build a
+                healthier future.
+              </span>
+              <br />
+              <br />
+              <span className="highlight-mint-dark">
+                The stop smoking session lasts between 90–120 minutes and
+                includes a relaxation MP3 to support you afterward.
+              </span>
+            </BodyText>
+          </div>
+
+          <div className="text-center py-2">
+            <CTALink href="/contact">Book Stop Smoking Session</CTALink>
+          </div>
+
+          <div className="bg-sage-900/95 p-6 rounded-xl shadow-lg">
+            <BodyText size="md" colour="cream">
+              <em className="emphasis-text-dark">
+                No initial consultation is needed. Commitment to the process is
+                important — success relies on your participation both during and
+                after the session.
+              </em>
+            </BodyText>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden lg:block relative">
         <Image
           src={stopSmoking}
-          alt="Recovery Road"
-          className="w-full object-cover aspect-9/4 rounded-xl"
+          alt="Stop Smoking Hypnotherapy"
+          className="w-full object-cover aspect-9/4 rounded-xl brightness-[0.85]"
+          priority
         />
-        <div className="absolute top-[10%] right-[27%] text-center w-full px-4">
-          <Title size="6xl" colour="cream" weight="bold">
+        <div className="absolute top-[10%] left-[10%]">
+          <Title size="6xl" lgSize="5xl" colour="cream" weight="bold">
             Stop Smoking <br />
             Session
           </Title>
         </div>
-        <div className="absolute bottom-[40%] right-[27%] text-center w-full">
-          <CTALink href={"/contact"}>
-            Book Stop Smoking <br />
-            Session
-          </CTALink>
-        </div>
-        <div className="absolute top-[15%] left-8/13 text-center w-1/3">
-          <BodyText size="xl" colour="cream" weight="bold">
-            Stop smoking with just one hypnotherapy session.
-            <br /> Using a proven approach, Laurence helps you break free from
-            smoking through a single, focused session. <br />
-            Hypnosis promotes deep relaxation and strengthens your motivation,
-            making it easier to let go of old habits and build a healthier
-            future. <br />
-            The stop smoking session lasts between 90–120 minutes and includes a
-            relaxation MP3 to support you afterward.
+
+        <div className="absolute top-[5%] right-[8%] text-center w-[35%] xl:top-[15%] xl:w-[30%]">
+          <BodyText size="xl" lgSize="lg" colour="cream" weight="bold">
+            <strong className="highlight-text-dark">
+              Stop smoking with just one hypnotherapy session.
+            </strong>
+            <br />
+            Using a proven approach, Laurence helps you break free from smoking
+            through a single, focused session. <br />
+            <span className="highlight-sage-dark">
+              Hypnosis promotes deep relaxation and strengthens your motivation,
+              making it easier to let go of old habits and build a healthier
+              future.
+            </span>
+            <br />
+            <span className="highlight-mint-dark">
+              The stop smoking session lasts between 90–120 minutes and includes
+              a relaxation MP3 to support you afterward.
+            </span>
           </BodyText>
         </div>
-        <div className="absolute bottom-[0%]  right-[7.5%] text-center w-[85%] px-4">
-          <BodyText size="xl" colour="cream" weight="bold">
-            <em>
+
+        <div className="absolute bottom-[35%] left-[10%]">
+          <CTALink href="/contact">Book Stop Smoking Session</CTALink>
+        </div>
+
+        <div className="absolute bottom-[5%] lg:bottom-[5%] lg:left-[5%] xl:bottom-[5%] xl:left-1/2 transform xl:-translate-x-1/2 text-center lg:text-left xl:text-center lg:w-[40%] xl:w-[90%]">
+          <BodyText size="xl" lgSize="md" colour="cream" weight="bold">
+            <em className="emphasis-text-dark">
               No initial consultation is needed. Commitment to the process is
-              important — success relies on <br />
-              your participation both during and after the session.{" "}
+              important — success relies on your participation both during and
+              after the session.
             </em>
           </BodyText>
         </div>
