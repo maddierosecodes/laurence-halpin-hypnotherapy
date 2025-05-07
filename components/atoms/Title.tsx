@@ -10,6 +10,7 @@ import {
   largeColourStyles,
   weightStyles,
   variantStyles,
+  truncateStyles,
 } from "../../types/TextAtom.types";
 
 export const Title = ({
@@ -24,6 +25,7 @@ export const Title = ({
   lgColour,
   weight = "medium",
   variant = "default",
+  truncate = "none",
 }: TextAtomProps) => {
   const baseStyles = "leading-tight font-primary";
   const sizeStyle = sizeStyles[size];
@@ -36,6 +38,7 @@ export const Title = ({
   const lgColourStyle = lgColour ? largeColourStyles[lgColour] : "";
   const weightStyle = weightStyles[weight];
   const variantStyle = variantStyles[variant];
+  const truncateStyle = truncateStyles[truncate];
 
   const combinedStyles = [
     baseStyles,
@@ -49,6 +52,7 @@ export const Title = ({
     mdColourStyle,
     lgColourStyle,
     weightStyle,
+    truncateStyle,
   ]
     .filter(Boolean)
     .join(" ");

@@ -14,6 +14,7 @@ export type TextSize =
 export type TextColour = "ink" | "forest" | "sage" | "mint" | "cream";
 export type TextWeight = "normal" | "medium" | "bold" | "semibold";
 export type TextVariant = "default" | "dark-bg" | "light-bg";
+export type TextTruncate = "none" | "2-lines" | "3-lines";
 
 export interface TextAtomProps {
   children: React.ReactNode;
@@ -27,6 +28,7 @@ export interface TextAtomProps {
   lgColour?: TextColour;
   weight?: TextWeight;
   variant?: TextVariant;
+  truncate?: TextTruncate;
 }
 
 export const sizeStyles: Record<TextSize, string> = {
@@ -128,4 +130,10 @@ export const variantStyles: Record<TextVariant, string> = {
   default: "",
   "dark-bg": "text-cream-50",
   "light-bg": "text-ink-400",
+};
+
+export const truncateStyles: Record<TextTruncate, string> = {
+  none: "",
+  "2-lines": "line-clamp-2",
+  "3-lines": "line-clamp-3",
 };

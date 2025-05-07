@@ -20,7 +20,7 @@ export default function Card({ title, icon }: CardProps) {
         smSize="md"
         colour="forest"
         weight="medium"
-        className="line-clamp-3 sm:line-clamp-2"
+        truncate="3-lines"
       >
         {title}
       </Title>
