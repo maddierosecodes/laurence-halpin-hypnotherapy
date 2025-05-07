@@ -25,7 +25,7 @@ export const HomeHero = () => {
 
   const textContent = (
     <section
-      className="flex flex-col gap-4 lg:gap-6 text-center lg:text-left"
+      className="flex flex-col gap-4 lg:gap-6 text-center lg:text-left relative"
       aria-label="Introduction"
     >
       <header className="flex flex-col gap-2">
@@ -75,7 +75,7 @@ export const HomeHero = () => {
       textComponent={textContent}
       imageComponent={imageContent}
       imagePosition={isMobile ? "left" : "right"}
-      className="mt-10 lg:pt-20 overflow-hidden"
+      className="mt-10 lg:pt-20 relative"
     />
   );
 };
