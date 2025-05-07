@@ -81,8 +81,8 @@ export default function Qualifications() {
           quality={80}
           loading="lazy"
         />
-        <div className="absolute top-1/2 left-[10%] -translate-y-1/2 text-left max-w-[80%] md:max-w-[60%]">
-          <Title size="4xl" colour="cream" weight="bold">
+        <div className="absolute top-1/2 left-[5%] sm:left-[10%] -translate-y-1/2 text-left max-w-[90%] md:max-w-[60%] bg-black/30 sm:bg-transparent p-3 rounded-lg">
+          <Title size="3xl" smSize="4xl" colour="cream" weight="bold">
             Training, <br />
             Qualifications <br />& Memberships
           </Title>
