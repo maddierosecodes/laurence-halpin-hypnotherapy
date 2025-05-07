@@ -45,22 +45,22 @@ const navigationLinks = [
 export const Header = () => {
   return (
     <header
-      className=" py-4 fixed top-0 left-0 right-0 z-50 bg-mint-100"
+      className="py-4 sm:py-3 fixed top-0 left-0 right-0 z-50 bg-mint-100"
       role="banner"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-start sm:items-center">
           <div className="flex justify-start">
             <Link
               href="/"
               className="flex flex-col items-start"
               aria-label="Laurence Halpin Hypnotherapist - Home"
             >
-              <Title size="4xl" colour="sage" weight="bold">
+              <Title size="3xl" smSize="4xl" colour="sage" weight="bold">
                 Laurence Halpin
               </Title>
 
-              <Subtitle size="xl" colour="mint" weight="medium">
+              <Subtitle size="lg" smSize="xl" colour="mint" weight="medium">
                 Solution Focussed Hypnotherapist
               </Subtitle>
             </Link>
