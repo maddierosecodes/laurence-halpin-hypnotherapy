@@ -78,37 +78,39 @@ export const BurgerMenu = ({ links }: BurgerMenuProps) => {
               </button>
             </div>
             <nav
-              className="flex flex-col items-center justify-center h-[calc(100%-4rem)]"
+              className="flex flex-col items-center h-[calc(100%-4rem)] overflow-y-auto py-8"
               role="menu"
               aria-label="Mobile navigation"
             >
-              {links.map((link) => (
-                <div key={link.href} className="w-full text-center py-4">
-                  <a
-                    href={link.href}
-                    className="block text-2xl text-mint-200 hover:text-ink-400 py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                  {link.dropdownItems && (
-                    <div className="mt-2 w-full flex justify-center">
-                      <div className="pl-20 flex flex-col items-start">
-                        {link.dropdownItems.map((item) => (
-                          <a
-                            key={item.href}
-                            href={item.href}
-                            className="block text-xl text-mint-200 hover:text-ink-400 py-2"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {item.label}
-                          </a>
-                        ))}
+              <div className="w-full max-w-xs">
+                {links.map((link) => (
+                  <div key={link.href} className="py-4">
+                    <a
+                      href={link.href}
+                      className="block text-2xl text-mint-200 hover:text-ink-400 py-2 text-left"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                    {link.dropdownItems && (
+                      <div className="mt-2">
+                        <div className="pl-4 flex flex-col">
+                          {link.dropdownItems.map((item) => (
+                            <a
+                              key={item.href}
+                              href={item.href}
+                              className="block text-xl text-mint-200 hover:text-ink-400 py-2 text-left"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {item.label}
+                            </a>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              ))}
+                    )}
+                  </div>
+                ))}
+              </div>
             </nav>
           </div>
         </div>

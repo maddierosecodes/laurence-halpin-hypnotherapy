@@ -8,7 +8,7 @@ export const Footer = () => {
     <footer className={`bg-forest shadow-sm`} role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <nav
-          className="flex justify-between items-center text-cream-100"
+          className="flex flex-col-reverse sm:flex-row justify-between items-center gap-4 text-cream-100"
           aria-label="Footer navigation"
         >
           <section className="hover:text-mint-500" aria-label="Site credit">

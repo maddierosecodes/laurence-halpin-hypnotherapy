@@ -67,12 +67,6 @@ export default function StopSmoking() {
             </BodyText>
           </div>
 
-          <div className="text-center py-2">
-            <CTALink href="/contact?type=stop-smoking">
-              Book Stop Smoking Session
-            </CTALink>
-          </div>
-
           <div
             className="bg-sage-900/95 p-6 rounded-xl shadow-lg"
             role="note"
@@ -85,6 +79,12 @@ export default function StopSmoking() {
                 after the session.
               </em>
             </BodyText>
+          </div>
+
+          <div className="text-center py-2">
+            <CTALink href="/contact?type=stop-smoking">
+              Book Stop Smoking Session
+            </CTALink>
           </div>
         </div>
       </div>
