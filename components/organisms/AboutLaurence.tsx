@@ -49,7 +49,7 @@ export default function AboutLaurence() {
           . <br />
           <Link
             className="text-forest-800 hover:text-forest-900 underline focus:outline-none focus:ring-2 focus:ring-forest-800 focus:ring-offset-2 transition-colors duration-300"
-            href="/contact"
+            href="/contact?type=initial-consultation"
             aria-label="Contact Laurence to start your hypnotherapy journey"
           >
             Get in touch today

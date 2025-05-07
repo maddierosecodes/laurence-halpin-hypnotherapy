@@ -85,7 +85,9 @@ export default function Hypnotherapy() {
             <span className="highlight-text-dark">online or in person</span>,
             depending on what suits you best.{" "}
           </BodyText>
-          <CTALink href="/contact">Book Initial Consultation</CTALink>
+          <CTALink href="/contact?type=initial-consultation">
+            Book Initial Consultation
+          </CTALink>
         </div>
         {/* Gallery Section - Hidden on Mobile */}
         <div

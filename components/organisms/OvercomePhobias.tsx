@@ -67,7 +67,7 @@ export default function OvercomePhobias() {
       </div>
 
       <div className="flex justify-center lg:justify-end mt-8">
-        <CTALink href="/contact">
+        <CTALink href="/contact?type=phobia-package">
           Book Overcoming Phobias <br />
           Consultation
         </CTALink>

@@ -6,7 +6,7 @@ export const CTAsection = () => {
       <CTALink href="/about#solution-list">
         What can hypnotherapy <br /> do for you?
       </CTALink>
-      <CTALink href="/contact">
+      <CTALink href="/contact?type=initial-consultation">
         Arrange an initial <br /> consultation
       </CTALink>
     </section>

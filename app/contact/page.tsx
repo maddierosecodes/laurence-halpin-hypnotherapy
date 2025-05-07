@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { ContactForm } from "@/components/organisms/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Laurence Halpin | Professional Hypnotherapy in Chorley",
@@ -35,12 +36,11 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <main className="mt-10 flex items-center justify-center" role="main">
-      <section aria-labelledby="contact-heading">
-        <h1 id="contact-heading" className="text-4xl font-bold">
-          Contact
-        </h1>
-      </section>
+    <main
+      className="flex items-center justify-center px-4 py-8 pt-16"
+      role="main"
+    >
+      <ContactForm />
     </main>
   );
 }

@@ -72,7 +72,9 @@ export const Header = () => {
               </BodyText>
 
               {/* <CTALink href="/about#testimonials">⭐ Testimonials</CTALink> */}
-              <CTALink href="/contact">📩 Get in touch</CTALink>
+              <CTALink href="/contact?type=general">
+                📩 Get in touch
+              </CTALink>
             </div>
             <div className="flex justify-end">
               <Navigation links={navigationLinks} />

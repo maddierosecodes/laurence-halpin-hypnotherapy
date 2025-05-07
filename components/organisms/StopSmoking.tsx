@@ -68,7 +68,9 @@ export default function StopSmoking() {
           </div>
 
           <div className="text-center py-2">
-            <CTALink href="/contact">Book Stop Smoking Session</CTALink>
+            <CTALink href="/contact?type=stop-smoking">
+              Book Stop Smoking Session
+            </CTALink>
           </div>
 
           <div
@@ -124,7 +126,9 @@ export default function StopSmoking() {
         </div>
 
         <div className="absolute bottom-[35%] left-[10%]">
-          <CTALink href="/contact">Book Stop Smoking Session</CTALink>
+          <CTALink href="/contact?type=stop-smoking">
+            Book Stop Smoking Session
+          </CTALink>
         </div>
 
         <div className="absolute bottom-[5%] lg:bottom-[5%] lg:left-[5%] xl:bottom-[5%] xl:left-1/2 transform xl:-translate-x-1/2 text-center lg:text-left xl:text-center lg:w-[40%] xl:w-[90%]">
