@@ -54,7 +54,7 @@ export default function AboutHypnotherapy() {
 
           <div className="relative mb-12 max-w-5xl mx-auto mt-5">
             <div
-              className="block aspect-[16/12] sm:aspect-[21/8] w-full relative rounded-2xl overflow-hidden"
+              className="block min-h-[400px] sm:aspect-[21/8] w-full relative rounded-2xl overflow-hidden"
               role="img"
               aria-label="Growth and transformation concept"
             >
@@ -64,7 +64,7 @@ export default function AboutHypnotherapy() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-0 sm:inset-auto sm:left-8 sm:top-1/2 sm:-translate-y-1/2 sm:max-w-md bg-sage-900/90 backdrop-blur-sm p-4 sm:p-5 rounded-2xl shadow-xl w-full sm:m-0">
+              <div className="absolute inset-x-4 top-4 bottom-4 flex items-center justify-center sm:p-0 sm:inset-auto sm:left-8 sm:top-1/2 sm:-translate-y-1/2 sm:max-w-md bg-sage-900/90 backdrop-blur-sm p-6 rounded-2xl shadow-xl w-auto sm:w-full sm:m-0">
                 <BodyText variant="dark-bg" size="lg" colour="cream">
                   <strong className="highlight-text-dark">
                     Solution Focused Hypnotherapy
