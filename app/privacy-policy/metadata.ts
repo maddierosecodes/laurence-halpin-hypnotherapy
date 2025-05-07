@@ -1,21 +1,29 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy | Laurence Halpin Hypnotherapy",
   description:
-    "Privacy policy for Laurence Halpin Hypnotherapy. Learn how we collect, use, and protect your personal information.",
+    "Privacy policy for Laurence Halpin Hypnotherapy. Learn how we collect, use, and protect your personal information in accordance with UK GDPR.",
   alternates: {
     canonical: "/privacy-policy",
   },
+  metadataBase: new URL("https://www.lhhypnotherapy.co.uk"),
   openGraph: {
     title: "Privacy Policy | Laurence Halpin Hypnotherapy",
     description:
-      "Privacy policy for Laurence Halpin Hypnotherapy. Learn how we collect, use, and protect your personal information.",
-    url: "https://laurencehalpinhypnotherapy.com/privacy-policy",
+      "Privacy policy for Laurence Halpin Hypnotherapy. Learn how we collect, use, and protect your personal information in accordance with UK GDPR.",
+    url: "https://www.lhhypnotherapy.co.uk/privacy-policy",
+    siteName: "Laurence Halpin Hypnotherapy",
+    locale: "en_GB",
+    type: "website",
   },
   robots: {
     index: true,
     follow: true,
     nocache: true,
   },
+  authors: [{ name: "Laurence Halpin" }],
+  creator: "Laurence Halpin",
+  publisher: "Laurence Halpin Hypnotherapy",
+  category: "Legal",
 };

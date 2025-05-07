@@ -3,18 +3,36 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Hypnotherapy in Chorley | Home",
+  title: "Professional Hypnotherapy in Chorley | Laurence Halpin",
   description:
-    "Professional hypnotherapy in Chorley by Laurence Halpin. Helping people overcome anxiety, manage stress, and build lasting confidence through evidence-based hypnosis.",
+    "Professional hypnotherapy in Chorley by Laurence Halpin. Expert help with anxiety, stress management, smoking cessation, and phobias through evidence-based solution-focused hypnotherapy.",
   alternates: {
     canonical: "/",
   },
+  metadataBase: new URL("https://www.lhhypnotherapy.co.uk"),
   openGraph: {
-    title: "Hypnotherapy in Chorley | Laurence Halpin",
+    title: "Professional Hypnotherapy in Chorley | Laurence Halpin",
     description:
-      "Discover personalised hypnotherapy services in Chorley with Laurence Halpin. Specialising in anxiety, smoking cessation, and stress management.",
-    url: "https://www.lhhypnotherapy.co.uk/",
+      "Professional hypnotherapy in Chorley by Laurence Halpin. Expert help with anxiety, stress management, smoking cessation, and phobias through evidence-based solution-focused hypnotherapy.",
+    url: "https://www.lhhypnotherapy.co.uk",
+    siteName: "Laurence Halpin Hypnotherapy",
+    locale: "en_GB",
+    type: "website",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  authors: [{ name: "Laurence Halpin" }],
+  creator: "Laurence Halpin",
+  publisher: "Laurence Halpin Hypnotherapy",
+  category: "Health & Wellness",
 };
 
 export default function Home() {
@@ -35,6 +53,7 @@ export default function Home() {
               addressLocality: "Chorley",
               addressRegion: "Lancashire",
               addressCountry: "GB",
+              postalCode: "PR7",
             },
             geo: {
               "@type": "GeoCoordinates",
@@ -56,12 +75,20 @@ export default function Home() {
                 "Wednesday",
                 "Thursday",
                 "Friday",
+                "Saturday",
               ],
               opens: "09:00",
-              closes: "17:00",
+              closes: "20:00",
             },
             priceRange: "££",
             image: "https://www.lhhypnotherapy.co.uk/images/laurence_alt.jpg",
+            founder: {
+              "@type": "Person",
+              name: "Laurence Halpin",
+              jobTitle: "Professional Hypnotherapist",
+              description:
+                "Professional hypnotherapist with over 36 years of mental health experience",
+            },
           }),
         }}
       />

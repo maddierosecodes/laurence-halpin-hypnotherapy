@@ -20,7 +20,11 @@ export default function OvercomePhobias() {
         </Title>
       </div>
       <div className="text-left">
-        <ul className="space-y-6">
+        <ul
+          className="space-y-6"
+          role="list"
+          aria-label="Phobia treatment process"
+        >
           <li>
             <Subtitle size="xl" colour="mint" weight="medium">
               Understanding Your Phobia
@@ -78,18 +82,16 @@ export default function OvercomePhobias() {
         alt="Calm ocean waves for phobia treatment relaxation"
         className="rounded-xl w-full h-full object-cover aspect-[16/9] lg:aspect-[1/1.2]"
       />
-      <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 lg:p-10 xl:items-start xl:justify-start xl:pt-20">
+      <div
+        className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 lg:p-10 xl:items-start xl:justify-start xl:pt-20"
+        role="complementary"
+        aria-label="Inspirational quote"
+      >
         <div className="w-full lg:w-2/3">
-          <BodyText
-            size="2xl"
-            smSize="3xl"
-            lgSize="4xl"
-            colour="cream"
-            weight="bold"
-          >
+          <blockquote className="leading-relaxed font-main text-2xl sm:text-3xl lg:text-4xl text-cream font-bold">
             &ldquo;Courage doesn&apos;t mean fear disappears — it means choosing
             growth even when fear is present.&rdquo;
-          </BodyText>
+          </blockquote>
         </div>
       </div>
     </div>

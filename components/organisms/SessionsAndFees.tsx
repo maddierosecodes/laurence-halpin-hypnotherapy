@@ -2,10 +2,15 @@ import React from "react";
 import { Title } from "../atoms/Title";
 import { BodyText } from "../atoms/BodyText";
 import { Subtitle } from "../atoms/Subtitle";
+import { SectionHeading } from "../atoms/SectionHeading";
 import Image from "next/image";
 import headTendrils from "../../public/images/head_tendrils.jpg";
+import { StructuredTable } from "../molecules/StructuredTable";
 
 export default function SessionsAndFees() {
+  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  const timeSlots = ["Morning", "Afternoon", "Evening", "Night"];
+
   // Define availability data with checkmarks
   const availabilityData = {
     Mon: { Morning: true, Afternoon: true, Evening: true, Night: false },
@@ -16,9 +21,6 @@ export default function SessionsAndFees() {
     Sat: { Morning: true, Afternoon: true, Evening: true, Night: false },
     Sun: { Morning: false, Afternoon: false, Evening: false, Night: false },
   };
-
-  const timeSlots = ["Morning", "Afternoon", "Evening", "Night"];
-  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   return (
     <section
@@ -42,74 +44,12 @@ export default function SessionsAndFees() {
               Availability
             </Subtitle>
 
-            <div className="relative">
-              <div className="w-full bg-sage-200/20 rounded-xl p-3 mt-3 overflow-x-auto">
-                <div className="min-w-[600px] md:min-w-0">
-                  <div className="grid grid-cols-8 gap-x-1 gap-y-2 text-cream">
-                    {/* Header Row */}
-                    <div className="col-span-1"></div>
-                    {days.map((day) => (
-                      <div
-                        key={day}
-                        className="col-span-1 text-center font-bold text-sm"
-                      >
-                        {day}
-                      </div>
-                    ))}
-
-                    {/* Time Slot Rows */}
-                    {timeSlots.map((slot) => (
-                      <React.Fragment key={slot}>
-                        <div className="col-span-1 text-left font-bold text-sm">
-                          {slot}
-                        </div>
-                        {days.map((day) => (
-                          <div
-                            key={`${day}-${slot}`}
-                            className="col-span-1 flex items-center justify-center"
-                          >
-                            <div
-                              className={`w-full h-7 rounded-md flex items-center justify-center ${
-                                availabilityData[
-                                  day as keyof typeof availabilityData
-                                ][slot as keyof typeof availabilityData.Mon]
-                                  ? "bg-mint-200"
-                                  : "bg-cream/20"
-                              }`}
-                            >
-                              {availabilityData[
-                                day as keyof typeof availabilityData
-                              ][slot as keyof typeof availabilityData.Mon] && (
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 24 24"
-                                  fill="currentColor"
-                                  className="w-4 h-4 text-sage"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
-                                    clipRule="evenodd"
-                                  />
-                                </svg>
-                              )}
-                            </div>
-                          </div>
-                        ))}
-                      </React.Fragment>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Scroll Indicator */}
-              <div className="md:hidden">
-                <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-sage-700 to-transparent pointer-events-none" />
-                <p className="text-cream/80 text-xs text-center mt-2 italic">
-                  Scroll horizontally to view full schedule
-                </p>
-              </div>
-            </div>
+            <StructuredTable
+              columnHeaders={days}
+              rowHeaders={timeSlots}
+              data={availabilityData}
+              showScrollIndicator={true}
+            />
           </div>
 
           {/* Important Information and Image Container */}
@@ -169,9 +109,9 @@ export default function SessionsAndFees() {
 
             <div className="space-y-6 text-cream mt-6">
               <div>
-                <h3 className="text-lg font-bold highlight-text-dark">
+                <SectionHeading variant="dark-bg" colour="cream">
                   Initial Consultation – £30
-                </h3>
+                </SectionHeading>
                 <p className="text-sm md:text-base">
                   A relaxed 30–45 minute session to explore how hypnotherapy can
                   help you. <br />
@@ -182,9 +122,9 @@ export default function SessionsAndFees() {
               </div>
 
               <div>
-                <h3 className="text-lg font-bold highlight-text-dark">
+                <SectionHeading variant="dark-bg" colour="cream">
                   Therapy Sessions – £65
-                </h3>
+                </SectionHeading>
                 <p className="text-sm md:text-base">
                   Ongoing sessions of around 50 minutes, combining
                   <span className="highlight-mint-dark">
@@ -197,9 +137,9 @@ export default function SessionsAndFees() {
               </div>
 
               <div>
-                <h3 className="text-lg font-bold highlight-text-dark">
+                <SectionHeading variant="dark-bg" colour="cream">
                   Phobia Package – £225
-                </h3>
+                </SectionHeading>
                 <p className="text-sm md:text-base">
                   A{" "}
                   <span className="highlight-mint-dark">
@@ -214,9 +154,9 @@ export default function SessionsAndFees() {
               </div>
 
               <div>
-                <h3 className="text-lg font-bold highlight-text-dark">
+                <SectionHeading variant="dark-bg" colour="cream">
                   Stop Smoking Session – £120
-                </h3>
+                </SectionHeading>
                 <p className="text-sm md:text-base">
                   A single,{" "}
                   <span className="highlight-mint-dark">focused session</span>{" "}

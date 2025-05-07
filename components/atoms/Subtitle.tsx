@@ -22,10 +22,10 @@ export const Subtitle = ({
   const variantStyle = variantStyles[variant];
 
   return (
-    <p
+    <h2
       className={`${baseStyles} ${sizeStyle} ${lgSizeStyle} ${colourStyle} ${weightStyle} ${variantStyle}`}
     >
       {children}
-    </p>
+    </h2>
   );
 };

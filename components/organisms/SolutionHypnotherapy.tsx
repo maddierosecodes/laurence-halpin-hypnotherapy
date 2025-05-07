@@ -88,7 +88,11 @@ export default function Hypnotherapy() {
           <CTALink href="/contact">Book Initial Consultation</CTALink>
         </div>
         {/* Gallery Section - Hidden on Mobile */}
-        <div className="hidden lg:grid grid-cols-2 gap-4 sm:gap-6 gap-y-6 sm:gap-y-9 w-full max-w-xl mx-auto lg:mx-0 px-2 sm:px-4 order-2 lg:order-1">
+        <div
+          className="hidden lg:grid grid-cols-2 gap-4 sm:gap-6 gap-y-6 sm:gap-y-9 w-full max-w-xl mx-auto lg:mx-0 px-2 sm:px-4 order-2 lg:order-1"
+          role="complementary"
+          aria-label="Gallery of therapeutic images"
+        >
           <div className="flex flex-col items-center justify-center">
             <Image
               src={healthyEatingImage}

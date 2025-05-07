@@ -14,7 +14,11 @@ export default function StopSmoking() {
     >
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col gap-6">
-        <div className="relative w-full">
+        <div
+          className="relative w-full"
+          role="banner"
+          aria-label="Stop Smoking Session Header"
+        >
           <Image
             src={stopSmoking}
             alt="Stop Smoking Hypnotherapy"
@@ -31,8 +35,16 @@ export default function StopSmoking() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <div className="bg-sage-900/95 p-6 rounded-xl shadow-lg">
+        <div
+          className="flex flex-col gap-4"
+          role="article"
+          aria-label="Stop Smoking Session Information"
+        >
+          <div
+            className="bg-sage-900/95 p-6 rounded-xl shadow-lg"
+            role="region"
+            aria-label="Main session description"
+          >
             <BodyText size="lg" colour="cream">
               <strong className="highlight-text-dark">
                 Stop smoking with just one hypnotherapy session.
@@ -59,7 +71,11 @@ export default function StopSmoking() {
             <CTALink href="/contact">Book Stop Smoking Session</CTALink>
           </div>
 
-          <div className="bg-sage-900/95 p-6 rounded-xl shadow-lg">
+          <div
+            className="bg-sage-900/95 p-6 rounded-xl shadow-lg"
+            role="note"
+            aria-label="Important session information"
+          >
             <BodyText size="md" colour="cream">
               <em className="emphasis-text-dark">
                 No initial consultation is needed. Commitment to the process is
