@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BLUR_DATA_URL } from "../utils/imageUtils";
 
 interface ProfileImageProps {
   src: string;
@@ -7,6 +8,7 @@ interface ProfileImageProps {
   width?: number;
   height?: number;
   containerClassName?: string;
+  priority?: boolean;
 }
 
 export const ProfileImage = ({
@@ -16,6 +18,7 @@ export const ProfileImage = ({
   width = 576,
   height = 576,
   containerClassName = "",
+  priority = false,
 }: ProfileImageProps) => {
   const shapeClasses = {
     circle: "rounded-full",
@@ -36,7 +39,10 @@ export const ProfileImage = ({
         width={width}
         height={height}
         className="object-cover w-full h-full"
-        priority
+        priority={priority}
+        quality={80}
+        placeholder="blur"
+        blurDataURL={BLUR_DATA_URL}
       />
     </figure>
   );

@@ -4,6 +4,7 @@ import stopSmoking from "@/public/images/stop_smoking.png";
 import { Title } from "../atoms/Title";
 import { BodyText } from "../atoms/BodyText";
 import { CTALink } from "../atoms/CTALink";
+import { BLUR_DATA_URL } from "../utils/imageUtils";
 
 export default function StopSmoking() {
   return (
@@ -23,7 +24,11 @@ export default function StopSmoking() {
             src={stopSmoking}
             alt="Stop Smoking Hypnotherapy"
             className="w-full object-cover aspect-[3/2] rounded-xl brightness-[0.85]"
-            priority
+            priority={false}
+            quality={80}
+            loading="lazy"
+            placeholder="blur"
+            blurDataURL={BLUR_DATA_URL}
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full px-4">
             <div className="bg-sage-900/60 p-2 rounded-lg inline-block">
@@ -95,7 +100,11 @@ export default function StopSmoking() {
           src={stopSmoking}
           alt="Stop Smoking Hypnotherapy"
           className="w-full object-cover aspect-9/4 rounded-xl brightness-[0.85]"
-          priority
+          priority={false}
+          quality={80}
+          loading="lazy"
+          placeholder="blur"
+          blurDataURL={BLUR_DATA_URL}
         />
         <div className="absolute top-[10%] left-[10%]">
           <Title size="6xl" lgSize="5xl" colour="cream" weight="bold">

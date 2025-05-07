@@ -6,6 +6,7 @@ import { BodyText } from "../atoms/BodyText";
 import Image from "next/image";
 import calmingOcean from "@/public/images/calming_ocean.jpg";
 import { CTALink } from "../atoms/CTALink";
+import { BLUR_DATA_URL } from "../utils/imageUtils";
 
 export default function OvercomePhobias() {
   const heroText = (
@@ -76,14 +77,19 @@ export default function OvercomePhobias() {
   );
 
   const heroImage = (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full aspect-[1/1.2]">
       <Image
         src={calmingOcean}
-        alt="Calm ocean waves for phobia treatment relaxation"
-        className="rounded-xl w-full h-full object-cover aspect-[16/9] lg:aspect-[1/1.2]"
+        alt="Calming ocean scene representing overcoming phobias"
+        className="w-full h-full object-cover rounded-xl"
+        quality={80}
+        loading="lazy"
+        placeholder="blur"
+        blurDataURL={BLUR_DATA_URL}
+        fill
       />
       <div
-        className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 lg:p-10 xl:items-start xl:justify-start xl:pt-20"
+        className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 lg:p-10 xl:items-start xl:justify-start xl:pt-20 bg-sage-900/30"
         role="complementary"
         aria-label="Inspirational quote"
       >

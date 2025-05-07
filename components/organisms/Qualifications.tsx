@@ -28,6 +28,8 @@ export default function Qualifications() {
           width={120}
           height={120}
           className="object-contain w-10 h-10"
+          quality={80}
+          loading="lazy"
         />
       ),
     },
@@ -44,6 +46,8 @@ export default function Qualifications() {
           width={120}
           height={120}
           className="object-contain w-10 h-10"
+          quality={80}
+          loading="lazy"
         />
       ),
     },
@@ -56,6 +60,8 @@ export default function Qualifications() {
           width={120}
           height={120}
           className="object-contain w-10 h-10"
+          quality={80}
+          loading="lazy"
         />
       ),
     },
@@ -72,6 +78,8 @@ export default function Qualifications() {
           src={rockStackImage}
           alt="Qualifications"
           className="w-full object-cover aspect-3/2 rounded-xl"
+          quality={80}
+          loading="lazy"
         />
         <div className="absolute top-1/2 left-[10%] -translate-y-1/2 text-left max-w-[80%] md:max-w-[60%]">
           <Title size="4xl" colour="cream" weight="bold">

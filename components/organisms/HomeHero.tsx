@@ -63,6 +63,7 @@ export const HomeHero = () => {
             alt="Laurence Halpin, hypnotherapist based in Chorley"
             shape="circle"
             containerClassName="bg-transparent w-full h-full -translate-y-3"
+            priority={true}
           />
         </figure>
       </div>

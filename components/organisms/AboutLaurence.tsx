@@ -71,6 +71,7 @@ export default function AboutLaurence() {
         src="/images/laurence_alt.jpg"
         alt="Laurence Halpin, a professional hypnotherapist based in Chorley"
         shape="circle"
+        priority={true}
       />
     </div>
   );

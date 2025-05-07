@@ -8,6 +8,7 @@ import stressImage from "@/public/images/stress.jpg";
 import anxietyImage from "@/public/images/anxiety.jpg";
 import depressionImage from "@/public/images/depression.jpg";
 import { CTALink } from "../atoms/CTALink";
+import { BLUR_DATA_URL } from "../utils/imageUtils";
 
 export default function Hypnotherapy() {
   return (
@@ -21,6 +22,9 @@ export default function Hypnotherapy() {
           src={recoveryRoadImage}
           alt="Recovery Road"
           className="w-full object-cover aspect-[3/2] sm:aspect-[3/1.5] md:aspect-4/1 rounded-xl"
+          quality={80}
+          placeholder="blur"
+          blurDataURL={BLUR_DATA_URL}
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full px-4 md:px-8 lg:top-[20%] lg:left-[25%] lg:w-1/2 lg:text-center">
           <div className="bg-sage-900/60 p-2 md:p-4 rounded-lg inline-block md:w-full lg:bg-transparent">
@@ -101,6 +105,9 @@ export default function Hypnotherapy() {
               src={healthyEatingImage}
               alt="Healthy Eating"
               className="rounded-xl object-cover w-full h-32 sm:h-40 md:h-52"
+              quality={80}
+              placeholder="blur"
+              blurDataURL={BLUR_DATA_URL}
             />
           </div>
           <div className="flex flex-col items-center justify-center">
@@ -109,6 +116,9 @@ export default function Hypnotherapy() {
                 src={stressImage}
                 alt="Stress"
                 className="rounded-xl object-cover w-full h-28 sm:h-32 md:h-40"
+                quality={80}
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
               />
             </div>
           </div>
