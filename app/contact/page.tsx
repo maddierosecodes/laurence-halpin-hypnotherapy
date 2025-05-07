@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ContactForm } from "@/components/organisms/ContactForm";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Contact Laurence Halpin | Professional Hypnotherapy in Chorley",
@@ -66,7 +67,9 @@ export default function Contact() {
       role="main"
       aria-label="Contact Laurence Halpin Hypnotherapy"
     >
-      <ContactForm />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ContactForm />
+      </Suspense>
     </main>
   );
 }
