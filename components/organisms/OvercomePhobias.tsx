@@ -72,7 +72,7 @@ export default function OvercomePhobias() {
   );
 
   const heroImage = (
-    <div className="relative w-full h-full lg:mt-12">
+    <div className="relative w-full h-full">
       <Image
         src={calmingOcean}
         alt="Calm ocean waves for phobia treatment relaxation"
