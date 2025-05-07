@@ -9,13 +9,13 @@ interface CardProps {
 export default function Card({ title, icon }: CardProps) {
   return (
     <div
-      className="bg-mint-300 border-2 border-sage-800 p-3 sm:p-4 rounded-lg shadow-md hover:shadow-lg transition-all 
+      className="bg-mint-300 border-2 border-sage-800 p-3 rounded-lg shadow-md hover:shadow-lg transition-all 
                  flex flex-col items-center justify-center text-center hover:bg-mint-100 
-                 hover:-translate-y-1 duration-300"
+                 hover:-translate-y-1 duration-300 h-[120px] sm:h-[140px]"
     >
       <div className="text-sage-600 mb-2">{icon}</div>
 
-      <Title size="md" colour="forest" weight="medium">
+      <Title size="md" colour="forest" weight="medium" className="line-clamp-2">
         {title}
       </Title>
     </div>
