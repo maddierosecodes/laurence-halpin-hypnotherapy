@@ -12,6 +12,10 @@ import {
   variantStyles,
 } from "../../types/TextAtom.types";
 
+interface SectionHeadingProps extends TextAtomProps {
+  isInteractive?: boolean;
+}
+
 export const SectionHeading = ({
   children,
   size = "lg",
@@ -24,7 +28,8 @@ export const SectionHeading = ({
   lgColour,
   weight = "bold",
   variant = "default",
-}: TextAtomProps) => {
+  isInteractive = false,
+}: SectionHeadingProps) => {
   const baseStyles = "leading-normal font-main";
   const sizeStyle = sizeStyles[size];
   const smSizeStyle = smSize ? smallSizeStyles[smSize] : "";
@@ -36,6 +41,9 @@ export const SectionHeading = ({
   const lgColourStyle = lgColour ? largeColourStyles[lgColour] : "";
   const weightStyle = weightStyles[weight];
   const variantStyle = variantStyles[variant];
+  const interactiveStyles = isInteractive
+    ? "transition-all duration-200 hover:text-mint-400 hover:cursor-pointer"
+    : "";
 
   const combinedStyles = [
     baseStyles,
@@ -49,6 +57,7 @@ export const SectionHeading = ({
     mdColourStyle,
     lgColourStyle,
     weightStyle,
+    interactiveStyles,
   ]
     .filter(Boolean)
     .join(" ");

@@ -6,6 +6,7 @@ import { SectionHeading } from "../atoms/SectionHeading";
 import Image from "next/image";
 import headTendrils from "../../public/images/head_tendrils.jpg";
 import { StructuredTable } from "../molecules/StructuredTable";
+import { NavLink } from "../atoms/NavLink";
 
 export default function SessionsAndFees() {
   const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -109,9 +110,15 @@ export default function SessionsAndFees() {
 
             <div className="space-y-6 text-cream mt-6">
               <div>
-                <SectionHeading variant="dark-bg" colour="cream">
-                  Initial Consultation – £30
-                </SectionHeading>
+                <NavLink href="/contact?type=initial-consultation">
+                  <SectionHeading
+                    variant="dark-bg"
+                    colour="cream"
+                    isInteractive
+                  >
+                    Initial Consultation – £30
+                  </SectionHeading>
+                </NavLink>
                 <p className="text-sm md:text-base">
                   A relaxed 30–45 minute session to explore how hypnotherapy can
                   help you. <br />
@@ -122,9 +129,15 @@ export default function SessionsAndFees() {
               </div>
 
               <div>
-                <SectionHeading variant="dark-bg" colour="cream">
-                  Therapy Sessions – £65
-                </SectionHeading>
+                <NavLink href="/contact?type=therapy-sessions">
+                  <SectionHeading
+                    variant="dark-bg"
+                    colour="cream"
+                    isInteractive
+                  >
+                    Therapy Sessions – £65
+                  </SectionHeading>
+                </NavLink>
                 <p className="text-sm md:text-base">
                   Ongoing sessions of around 50 minutes, combining
                   <span className="highlight-mint-dark">
@@ -137,9 +150,15 @@ export default function SessionsAndFees() {
               </div>
 
               <div>
-                <SectionHeading variant="dark-bg" colour="cream">
-                  Phobia Package – £225
-                </SectionHeading>
+                <NavLink href="/contact?type=phobia-package">
+                  <SectionHeading
+                    variant="dark-bg"
+                    colour="cream"
+                    isInteractive
+                  >
+                    Phobia Package – £225
+                  </SectionHeading>
+                </NavLink>
                 <p className="text-sm md:text-base">
                   A{" "}
                   <span className="highlight-mint-dark">
@@ -154,9 +173,15 @@ export default function SessionsAndFees() {
               </div>
 
               <div>
-                <SectionHeading variant="dark-bg" colour="cream">
-                  Stop Smoking Session – £120
-                </SectionHeading>
+                <NavLink href="/contact?type=stop-smoking">
+                  <SectionHeading
+                    variant="dark-bg"
+                    colour="cream"
+                    isInteractive
+                  >
+                    Stop Smoking Session – £120
+                  </SectionHeading>
+                </NavLink>
                 <p className="text-sm md:text-base">
                   A single,{" "}
                   <span className="highlight-mint-dark">focused session</span>{" "}

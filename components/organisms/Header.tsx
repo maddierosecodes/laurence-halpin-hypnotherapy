@@ -36,7 +36,7 @@ const navigationLinks = [
       },
       { href: "/services#stop-smoking", label: "Stop Smoking" },
       { href: "/services#overcome-phobias", label: "Overcome Phobias" },
-      { href: "/services#pricing", label: "Pricing" },
+      { href: "/services#sessions-and-fees", label: "Sessions & Fees" },
     ],
   },
   { href: "/contact", label: "Contact" },
@@ -72,9 +72,7 @@ export const Header = () => {
               </BodyText>
 
               {/* <CTALink href="/about#testimonials">⭐ Testimonials</CTALink> */}
-              <CTALink href="/contact?type=general">
-                📩 Get in touch
-              </CTALink>
+              <CTALink href="/contact?type=general">📩 Get in touch</CTALink>
             </div>
             <div className="flex justify-end">
               <Navigation links={navigationLinks} />
