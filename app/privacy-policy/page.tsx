@@ -279,7 +279,7 @@ export default function PrivacyPolicy() {
             <BodyText size="lg" variant="light-bg">
               Halpin Therapies Ltd is registered with the UK Information
               Commissioner&apos;s Office (ICO). Registration number:{" "}
-              <strong>[INSERT ICO NUMBER HERE]</strong>.
+              <strong>ZB879212</strong>.
             </BodyText>
           </div>
 
