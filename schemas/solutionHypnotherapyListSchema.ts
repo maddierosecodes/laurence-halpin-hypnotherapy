@@ -14,7 +14,7 @@ export const solutionHypnotherapyListSchema = {
     availableService: treatmentAreas.map((area) => ({
       '@type': 'MedicalTherapy',
       name: area.name,
-      description: `Professional solution focussed hypnotherapy treatment for ${area.name.toLowerCase()}`
+      description: `Professional solution focussed hypnotherapy for ${area.name.toLowerCase()}`
     }))
   })
 };
