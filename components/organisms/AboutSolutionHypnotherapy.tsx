@@ -1,8 +1,9 @@
-import React from "react";
-import Image from "next/image";
-import { BodyText } from "../atoms/BodyText";
-import { Title } from "../atoms/Title";
-import Script from "next/script";
+import React from 'react';
+import Image from 'next/image';
+import { BodyText } from '../atoms/BodyText';
+import { Title } from '../atoms/Title';
+import Script from 'next/script';
+import { aboutSolutionHypnotherapySchema } from '@/schemas/aboutSolutionHypnotherapySchema';
 
 export default function AboutHypnotherapy() {
   return (
@@ -11,40 +12,16 @@ export default function AboutHypnotherapy() {
         id="solution-focused-hypnotherapy-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalTherapy",
-            name: "Solution Focused Hypnotherapy",
-            description:
-              "A forward-looking approach to therapy that helps individuals imagine and work towards their desired future through goal-oriented questions and positive suggestion.",
-            medicalSpecialty: {
-              "@type": "MedicalSpecialty",
-              name: "Mental Health",
-            },
-            relevantSpecialty: [
-              "Anxiety Treatment",
-              "Stress Management",
-              "Phobia Treatment",
-              "Stop Smoking",
-              "Mental Health",
-            ],
-            recognizingAuthority: [
-              "National Council for Hypnotherapy",
-              "Association for Solution Focused Hypnotherapy",
-              "Complementary & Natural Healthcare Council",
-            ],
-          }),
+          __html: JSON.stringify(aboutSolutionHypnotherapySchema)
         }}
       />
       <section
         id="about-solution-focused-hypnotherapy"
         className="pt-8"
-        aria-labelledby="about-solution-focused-hypnotherapy-heading"
-      >
+        aria-labelledby="about-solution-focused-hypnotherapy-heading">
         <h2
           id="about-solution-focused-hypnotherapy-heading"
-          className="sr-only"
-        >
+          className="sr-only">
           About Solution Focused Hypnotherapy
         </h2>
         <div className="container mx-auto px-4 mb-8 text-center">
@@ -56,8 +33,7 @@ export default function AboutHypnotherapy() {
             <div
               className="block min-h-[400px] sm:aspect-[21/8] w-full relative rounded-2xl overflow-hidden"
               role="img"
-              aria-label="Growth and transformation concept"
-            >
+              aria-label="Growth and transformation concept">
               <Image
                 src="/images/growth_plant.jpg"
                 alt="Growth and transformation symbolized by a plant - representing personal development through hypnotherapy"
@@ -68,18 +44,18 @@ export default function AboutHypnotherapy() {
                 <BodyText variant="dark-bg" size="lg" colour="cream">
                   <strong className="highlight-text-dark">
                     Solution Focused Hypnotherapy
-                  </strong>{" "}
+                  </strong>{' '}
                   is a forward-looking approach. Rather than dwelling on the
                   past, it encourages you to
                   <em className="emphasis-text-dark">
-                    {" "}
+                    {' '}
                     imagine the future you want
                   </em>
                   , then helps you take steps to get there. The therapist will
-                  ask{" "}
+                  ask{' '}
                   <strong className="highlight-mint-dark">
                     powerful, goal-oriented questions
-                  </strong>{" "}
+                  </strong>{' '}
                   like: &ldquo;
                   <em className="emphasis-text-dark">
                     What would be different if things got better?
@@ -98,8 +74,7 @@ export default function AboutHypnotherapy() {
             <div
               className="w-full lg:w-[400px] relative rounded-2xl overflow-hidden max-h-[500px] lg:max-h-[400px]"
               role="img"
-              aria-label="Brain transformation concept"
-            >
+              aria-label="Brain transformation concept">
               <div className="aspect-[5/3] relative w-full h-full">
                 <Image
                   src="/images/butterfly_brain.jpg"
@@ -112,31 +87,30 @@ export default function AboutHypnotherapy() {
             <div
               className="w-full lg:w-[550px] bg-sage-900/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl"
               role="article"
-              aria-label="Explanation of hypnosis"
-            >
+              aria-label="Explanation of hypnosis">
               <BodyText variant="dark-bg" size="lg" colour="cream">
                 <strong className="highlight-text-dark">
                   Hypnosis helps calm the mind and body
                 </strong>
                 , easing anxiety through
                 <strong className="highlight-mint-dark">
-                  {" "}
+                  {' '}
                   relaxation and visualisation
                 </strong>
                 . In this natural,
                 <em className="emphasis-text-dark"> trance-like state</em>, your
                 brain becomes more open to positive suggestion, making it easier
-                to shift perspective. You remain{" "}
+                to shift perspective. You remain{' '}
                 <strong className="highlight-text-dark">
                   fully aware and in control
                 </strong>
-                , but deeply relaxed. This state supports{" "}
+                , but deeply relaxed. This state supports{' '}
                 <strong className="highlight-mint-dark">
                   focus on the positives
-                </strong>{" "}
+                </strong>{' '}
                 in your life and unlocks inner resources, encouraging
                 <em className="emphasis-text-dark">
-                  {" "}
+                  {' '}
                   clarity, confidence, and lasting change
                 </em>
                 .

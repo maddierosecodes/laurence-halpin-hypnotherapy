@@ -1,61 +1,59 @@
-import { Title } from "../atoms/Title";
-import { Subtitle } from "../atoms/Subtitle";
-import { Navigation } from "../molecules/Navigation";
-import { BurgerMenu } from "../atoms/BurgerMenu";
-import { CTALink } from "../atoms/CTALink";
-import Link from "next/link";
-import { BodyText } from "../atoms/BodyText";
+import { Title } from '../atoms/Title';
+import { Subtitle } from '../atoms/Subtitle';
+import { Navigation } from '../molecules/Navigation';
+import { BurgerMenu } from '../atoms/BurgerMenu';
+import { CTALink } from '../atoms/CTALink';
+import Link from 'next/link';
+import { BodyText } from '../atoms/BodyText';
 
 const navigationLinks = [
-  { href: "/", label: "Home" },
+  { href: '/', label: 'Home' },
   {
-    href: "/about",
-    label: "About",
+    href: '/about',
+    label: 'About',
     dropdownItems: [
-      { href: "/about", label: "About Laurence" },
+      { href: '/about', label: 'About Laurence' },
       {
-        href: "/about#qualifications",
-        label: "Training, Qualifications & Memberships",
+        href: '/about#qualifications',
+        label: 'Training, Qualifications & Memberships'
       },
       {
-        href: "/about#about-solution-focused-hypnotherapy",
-        label: "Solution Focussed Hypnotherapy",
+        href: '/about#about-solution-focused-hypnotherapy',
+        label: 'Solution Focussed Hypnotherapy'
       },
-      { href: "/about#solution-list", label: "Solutions" },
+      { href: '/about#solution-list', label: 'Solutions' }
       // { href: "/about#testimonials", label: "Testimonials" },
       // { href: "/about#articles", label: "Articles" },
-    ],
+    ]
   },
   {
-    href: "/services#solutionhypnotherapy",
-    label: "Services",
+    href: '/services#solutionhypnotherapy',
+    label: 'Services',
     dropdownItems: [
       {
-        href: "/services#solutionhypnotherapy",
-        label: "Solution Focussed Hypnotherapy",
+        href: '/services#solutionhypnotherapy',
+        label: 'Solution Focussed Hypnotherapy'
       },
-      { href: "/services#stop-smoking", label: "Stop Smoking" },
-      { href: "/services#overcome-phobias", label: "Overcome Phobias" },
-      { href: "/services#sessions-and-fees", label: "Sessions & Fees" },
-    ],
+      { href: '/services#stop-smoking', label: 'Stop Smoking' },
+      { href: '/services#overcome-phobias', label: 'Overcome Phobias' },
+      { href: '/services#sessions-and-fees', label: 'Sessions & Fees' }
+    ]
   },
-  { href: "/contact", label: "Contact" },
+  { href: '/contact', label: 'Contact' }
 ];
 
 export const Header = () => {
   return (
     <header
       className="py-4 sm:py-3 fixed top-0 left-0 right-0 z-50 bg-mint-100"
-      role="banner"
-    >
+      role="banner">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-start sm:items-center">
           <div className="flex justify-start">
             <Link
               href="/"
               className="flex flex-col items-start"
-              aria-label="Laurence Halpin Hypnotherapist - Home"
-            >
+              aria-label="Laurence Halpin Hypnotherapist - Home">
               <Title size="3xl" smSize="4xl" colour="sage" weight="bold">
                 Laurence Halpin
               </Title>
@@ -66,7 +64,7 @@ export const Header = () => {
             </Link>
           </div>
           <div className="flex flex-col items-end gap-2">
-            <div className="hidden lg:flex gap-8 mb-1 self-center flex items-center gap-2">
+            <div className="hidden lg:flex  mb-1 self-center items-center gap-2">
               <BodyText size="md" variant="light-bg">
                 📞 07951652175
               </BodyText>

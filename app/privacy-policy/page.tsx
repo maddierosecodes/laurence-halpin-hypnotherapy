@@ -1,10 +1,11 @@
-"use client";
+'use client';
 
-import { BodyText } from "@/components/atoms/BodyText";
-import { Subtitle } from "@/components/atoms/Subtitle";
-import { Title } from "@/components/atoms/Title";
-import { useRouter } from "next/navigation";
-import Script from "next/script";
+import { BodyText } from '@/components/atoms/BodyText';
+import { Subtitle } from '@/components/atoms/Subtitle';
+import { Title } from '@/components/atoms/Title';
+import { useRouter } from 'next/navigation';
+import Script from 'next/script';
+import { privacyPolicySchema } from '@/schemas/privacyPolicySchema';
 
 export default function PrivacyPolicy() {
   const router = useRouter();
@@ -15,53 +16,26 @@ export default function PrivacyPolicy() {
         id="privacy-policy-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "Privacy Policy",
-            description:
-              "Privacy policy for Laurence Halpin Hypnotherapy, explaining how we collect, use, and protect your personal information.",
-            publisher: {
-              "@type": "Organization",
-              name: "Laurence Halpin Hypnotherapy",
-              url: "https://www.lhhypnotherapy.co.uk",
-            },
-            datePublished: "2024-01-01",
-            dateModified: "2024-03-20",
-            mainEntity: {
-              "@type": "Article",
-              headline: "Privacy Policy",
-              author: {
-                "@type": "Person",
-                name: "Laurence Halpin",
-              },
-              datePublished: "2024-01-01",
-              dateModified: "2024-03-20",
-            },
-          }),
+          __html: JSON.stringify(privacyPolicySchema)
         }}
       />
       <main
         className="min-h-screen w-full px-6 md:px-20 pt-20 pb-5 relative"
-        role="main"
-      >
+        role="main">
         <section
           className="max-w-4xl mx-auto space-b-12 flex flex-col gap-6"
-          aria-labelledby="privacy-policy"
-        >
+          aria-labelledby="privacy-policy">
           <button
             type="button"
             onClick={() => router.back()}
             className="flex text-sage-700 hover:text-mint-500 transition-colors cursor-pointer pb-5"
-            aria-label="Go back to previous page"
-          >
+            aria-label="Go back to previous page">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 mr-2"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
+              stroke="currentColor">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -103,8 +77,7 @@ export default function PrivacyPolicy() {
 
             <ul
               className="list-disc ml-6 text-sage-700"
-              aria-label="Personal information collected"
-            >
+              aria-label="Personal information collected">
               <li>Your name</li>
               <li>Email address</li>
               <li>Telephone number</li>
@@ -119,8 +92,7 @@ export default function PrivacyPolicy() {
 
             <ul
               className="list-disc ml-6 text-sage-700"
-              aria-label="Additional information collected"
-            >
+              aria-label="Additional information collected">
               <li>
                 GP contact details and basic health information (where relevant)
               </li>
@@ -139,8 +111,7 @@ export default function PrivacyPolicy() {
 
             <ul
               className="list-disc ml-6 text-sage-700"
-              aria-label="How your data is used"
-            >
+              aria-label="How your data is used">
               <li>Contact you about your enquiry or sessions</li>
               <li>Send recordings or appointment information</li>
               <li>Tailor and plan therapy sessions</li>
@@ -155,8 +126,7 @@ export default function PrivacyPolicy() {
 
             <ul
               className="list-disc ml-6 text-sage-700"
-              aria-label="What we do not do with your data"
-            >
+              aria-label="What we do not do with your data">
               <li>Store your data in a website database</li>
               <li>Receive or retain your payment or bank details</li>
               <li>
@@ -177,19 +147,17 @@ export default function PrivacyPolicy() {
 
             <ul
               className="list-disc ml-6 text-sage-700 space-y-1"
-              aria-label="Your rights under UK GDPR"
-            >
+              aria-label="Your rights under UK GDPR">
               <li>
                 <strong>Be informed:</strong> This policy explains how your data
                 is used.
               </li>
               <li>
-                <strong>Access:</strong> Request a copy of your data by emailing{" "}
+                <strong>Access:</strong> Request a copy of your data by emailing{' '}
                 <a
                   href="mailto:laurence@lhhypnotherapy.co.uk"
                   className="underline"
-                  aria-label="Email Laurence Halpin"
-                >
+                  aria-label="Email Laurence Halpin">
                   laurence@lhhypnotherapy.co.uk
                 </a>
                 .
@@ -233,8 +201,7 @@ export default function PrivacyPolicy() {
 
             <ul
               className="list-disc ml-6 text-sage-700"
-              aria-label="Confidentiality exceptions"
-            >
+              aria-label="Confidentiality exceptions">
               <li>There is a serious risk of harm to yourself or others</li>
               <li>
                 There is a legal obligation (e.g. safeguarding, crime
@@ -278,7 +245,7 @@ export default function PrivacyPolicy() {
 
             <BodyText size="lg" variant="light-bg">
               Halpin Therapies Ltd is registered with the UK Information
-              Commissioner&apos;s Office (ICO). Registration number:{" "}
+              Commissioner&apos;s Office (ICO). Registration number:{' '}
               <strong>ZB879212</strong>.
             </BodyText>
           </div>
@@ -290,12 +257,11 @@ export default function PrivacyPolicy() {
               <br />
               <strong>Laurence Halpin</strong>
               <br />
-              Email:{" "}
+              Email:{' '}
               <a
                 href="mailto:laurence@lhhypnotherapy.co.uk"
                 className="underline"
-                aria-label="Email Laurence Halpin"
-              >
+                aria-label="Email Laurence Halpin">
                 laurence@lhhypnotherapy.co.uk
               </a>
             </BodyText>
