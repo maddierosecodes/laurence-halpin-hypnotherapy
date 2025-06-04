@@ -16,6 +16,7 @@ export default function RootLayout({
   return (
     <>
       <Script
+        id="localBusinessSchemaScript"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(localBusinessSchema)
