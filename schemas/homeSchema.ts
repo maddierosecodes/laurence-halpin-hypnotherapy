@@ -5,7 +5,7 @@ export const homeSchema = {
   description:
     'Professional hypnotherapy services in Chorley, Lancashire, specialising in solution-focused hypnotherapy for anxiety, stress, phobias, and more.',
   url: 'https://www.lhhypnotherapy.co.uk',
-  image: 'https://www.lhhypnotherapy.co.uk/images/laurence_bg.png',
+  image: 'https://www.lhhypnotherapy.co.uk/images/laurence_halpin.jpg',
   logo: 'https://www.lhhypnotherapy.co.uk/images/logo.png',
   email: 'laurence@lhhypnotherapy.co.uk',
   telephone: '+44 7951 652175',

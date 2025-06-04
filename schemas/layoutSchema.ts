@@ -4,7 +4,7 @@ export const localBusinessSchema = {
   name: 'Laurence Halpin Hypnotherapy',
   url: 'https://www.lhhypnotherapy.co.uk/',
   logo: 'https://www.lhhypnotherapy.co.uk/images/logo.png',
-  image: 'https://www.lhhypnotherapy.co.uk/images/laurence_bg.png',
+  image: 'https://www.lhhypnotherapy.co.uk/images/laurence_halpin.jpg',
   description:
     'Laurence Halpin is a qualified hypnotherapist based in Chorley, offering compassionate, effective hypnotherapy services for anxiety, stress, weight loss, and more.',
   address: {
