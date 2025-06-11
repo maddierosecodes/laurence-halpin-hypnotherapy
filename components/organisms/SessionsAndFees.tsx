@@ -151,7 +151,7 @@ export default function SessionsAndFees() {
                     variant="dark-bg"
                     colour="cream"
                     isInteractive>
-                    Phobia Package – £225
+                    Phobia Package – £260
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
@@ -173,7 +173,7 @@ export default function SessionsAndFees() {
                     variant="dark-bg"
                     colour="cream"
                     isInteractive>
-                    Stop Smoking Session – £120
+                    Stop Smoking Session – £150
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
