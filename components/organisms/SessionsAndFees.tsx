@@ -1,16 +1,16 @@
-import React from "react";
-import { Title } from "../atoms/Title";
-import { BodyText } from "../atoms/BodyText";
-import { Subtitle } from "../atoms/Subtitle";
-import { SectionHeading } from "../atoms/SectionHeading";
-import Image from "next/image";
-import headTendrils from "../../public/images/head_tendrils.jpg";
-import { StructuredTable } from "../molecules/StructuredTable";
-import { NavLink } from "../atoms/NavLink";
+import React from 'react';
+import { Title } from '../atoms/Title';
+import { BodyText } from '../atoms/BodyText';
+import { Subtitle } from '../atoms/Subtitle';
+import { SectionHeading } from '../atoms/SectionHeading';
+import Image from 'next/image';
+import headTendrils from '../../public/images/head_tendrils.jpg';
+import { StructuredTable } from '../molecules/StructuredTable';
+import { NavLink } from '../atoms/NavLink';
 
 export default function SessionsAndFees() {
-  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-  const timeSlots = ["Morning", "Afternoon", "Evening", "Night"];
+  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const timeSlots = ['Morning', 'Afternoon', 'Evening', 'Night'];
 
   // Define availability data with checkmarks
   const availabilityData = {
@@ -20,15 +20,14 @@ export default function SessionsAndFees() {
     Thu: { Morning: false, Afternoon: false, Evening: true, Night: false },
     Fri: { Morning: false, Afternoon: false, Evening: true, Night: false },
     Sat: { Morning: true, Afternoon: true, Evening: true, Night: false },
-    Sun: { Morning: false, Afternoon: false, Evening: false, Night: false },
+    Sun: { Morning: false, Afternoon: false, Evening: false, Night: false }
   };
 
   return (
     <section
       id="sessions-and-fees"
       className="mx-auto max-w-7xl px-4 py-12 xl:border-t-0 border-t border-sage-700"
-      aria-labelledby="sessions-and-fees-heading"
-    >
+      aria-labelledby="sessions-and-fees-heading">
       <div className="text-center mb-8">
         <Title size="4xl" smSize="5xl" lgSize="6xl" weight="bold" colour="sage">
           Sessions & Fees
@@ -62,24 +61,23 @@ export default function SessionsAndFees() {
                   variant="dark-bg"
                   size="2xl"
                   colour="cream"
-                  weight="bold"
-                >
+                  weight="bold">
                   Important Information:
                 </Subtitle>
                 <BodyText variant="dark-bg" size="md" colour="cream">
                   <span className="highlight-text-dark">
                     48 hours&apos; notice is required
-                  </span>{" "}
+                  </span>{' '}
                   for cancellations. Sessions cancelled late or missed may be
                   charged at the full rate.
                 </BodyText>
                 <div className="mt-3">
                   <BodyText variant="dark-bg" size="md" colour="cream">
-                    Hypnotherapy is{" "}
+                    Hypnotherapy is{' '}
                     <span className="highlight-mint-dark">
                       highly effective
-                    </span>{" "}
-                    but success cannot be guaranteed.{" "}
+                    </span>{' '}
+                    but success cannot be guaranteed.{' '}
                     <span className="emphasis-text-dark">
                       Your commitment and participation
                     </span>
@@ -114,8 +112,7 @@ export default function SessionsAndFees() {
                   <SectionHeading
                     variant="dark-bg"
                     colour="cream"
-                    isInteractive
-                  >
+                    isInteractive>
                     Initial Consultation – £30
                   </SectionHeading>
                 </NavLink>
@@ -133,18 +130,17 @@ export default function SessionsAndFees() {
                   <SectionHeading
                     variant="dark-bg"
                     colour="cream"
-                    isInteractive
-                  >
-                    Therapy Sessions – £65
+                    isInteractive>
+                    Therapy Sessions – £75
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
                   Ongoing sessions of around 50 minutes, combining
                   <span className="highlight-mint-dark">
-                    {" "}
+                    {' '}
                     solution-focused talking therapy
-                  </span>{" "}
-                  with{" "}
+                  </span>{' '}
+                  with{' '}
                   <span className="emphasis-text-dark">relaxing hypnosis</span>.
                 </p>
               </div>
@@ -154,16 +150,15 @@ export default function SessionsAndFees() {
                   <SectionHeading
                     variant="dark-bg"
                     colour="cream"
-                    isInteractive
-                  >
+                    isInteractive>
                     Phobia Package – £225
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
-                  A{" "}
+                  A{' '}
                   <span className="highlight-mint-dark">
                     structured programme
-                  </span>{" "}
+                  </span>{' '}
                   of four sessions (50 minutes each) designed to help you
                   overcome a specific phobia. <br />
                   <span className="highlight-sage-dark">
@@ -177,18 +172,17 @@ export default function SessionsAndFees() {
                   <SectionHeading
                     variant="dark-bg"
                     colour="cream"
-                    isInteractive
-                  >
+                    isInteractive>
                     Stop Smoking Session – £120
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
-                  A single,{" "}
-                  <span className="highlight-mint-dark">focused session</span>{" "}
-                  lasting 90–120 minutes to help you stop smoking.{" "}
+                  A single,{' '}
+                  <span className="highlight-mint-dark">focused session</span>{' '}
+                  lasting 90–120 minutes to help you stop smoking.{' '}
                   <span className="emphasis-text-dark">
                     No initial consultation required.
-                  </span>{" "}
+                  </span>{' '}
                   <br />
                   <span className="highlight-sage-dark">
                     Includes a relaxation MP3.
