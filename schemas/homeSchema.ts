@@ -8,7 +8,7 @@ export const homeSchema = {
   image: 'https://www.lhhypnotherapy.co.uk/images/laurence_halpin.jpg',
   logo: 'https://www.lhhypnotherapy.co.uk/images/logo.png',
   email: 'laurence@lhhypnotherapy.co.uk',
-  telephone: '+44 7951 652175',
+  telephone: '+44 7837 356217',
   address: {
     '@type': 'PostalAddress',
     streetAddress: "Health at Heart, 7 St. George's St.",

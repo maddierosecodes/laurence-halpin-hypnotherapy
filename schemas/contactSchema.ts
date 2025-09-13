@@ -12,7 +12,7 @@ export const contactSchema = {
   },
   mainEntity: {
     '@type': 'ContactPoint',
-    telephone: '+44 7951 652175',
+    telephone: '+44 7837 356217',
     email: 'laurence@lhhypnotherapy.co.uk',
     contactType: 'customer support',
     areaServed: 'GB',

@@ -20,7 +20,7 @@ export const localBusinessSchema = {
     latitude: 53.6515665,
     longitude: -2.6286468
   },
-  telephone: '+44 7951 652175',
+  telephone: '+44 7837 356217',
   email: 'laurence@lhhypnotherapy.co.uk',
   openingHoursSpecification: [
     {

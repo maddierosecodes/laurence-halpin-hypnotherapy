@@ -66,7 +66,7 @@ export const Header = () => {
           <div className="flex flex-col items-end gap-2">
             <div className="hidden lg:flex  mb-1 self-center items-center gap-2">
               <BodyText size="md" variant="light-bg">
-                📞 07951652175
+                📞 07837356217
               </BodyText>
 
               {/* <CTALink href="/about#testimonials">⭐ Testimonials</CTALink> */}
