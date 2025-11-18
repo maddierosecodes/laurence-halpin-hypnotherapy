@@ -113,7 +113,7 @@ export default function SessionsAndFees() {
                     variant="dark-bg"
                     colour="cream"
                     isInteractive>
-                    Initial Consultation – £30
+                    Initial Consultation – £75
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
